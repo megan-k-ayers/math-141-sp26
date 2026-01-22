@@ -1,4 +1,4 @@
-## [www.math-141.github.io](https://math-141.github.io/)
+## [www.math-141-sp26.github.io](https://math-141-sp26.github.io/)
 
 This repository contains source code for the course website for Math 141: Introduction to Probability and Statistics at Reed College, Spring 2026.
 
