@@ -9,7 +9,7 @@ project:
 website:
   title: "Math 141"
   image: assets/math141-hex.png
-  site-url: "https://www.math-141.github.io/"
+  site-url: "https://www.math-141-sp26.github.io/"
   favicon: assets/favicon.ico
   navbar:
     title: false
