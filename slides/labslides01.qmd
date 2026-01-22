@@ -1,0 +1,93 @@
+---
+pagetitle: "Lab 1: Intro to R, RStudio, Quarto"
+editor: source
+format: 
+  revealjs:
+    chalkboard: true
+    incremental: true
+    theme: [default, custom.scss]
+    height: 900
+    width: 1600
+    slide-number: c
+    auto-stretch: false
+    callout-appearance: simple
+    pdf-max-pages-per-slide: 2
+    menu: 
+      side: right
+      numbers: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, 
+                      fig.retina = 3, fig.align = 'center')
+library(knitr)
+library(tidyverse)
+```
+
+::::: columns
+::: {.column .center width="60%"}
+![](img/DAW.jpeg){width="90%"}
+:::
+
+::: {.column .center width="40%"}
+<br>
+
+[Lab 1: Intro to R, RStudio, Quarto]{.custom-title}
+
+<br> <br> <br> <br>
+
+[Megan Ayers]{.custom-subtitle}
+
+[Math 141 \| Spring 2026 <br> Thursday, Week 1]{.custom-subtitle}
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Goals for Today
+
+::: nonincremental
+-   Get to know each other
+-   Take a tour of RStudio
+-   Run through `intro.qmd`
+-   Download the lab materials for today on RStudio Server and start the lab
+:::
+
+------------------------------------------------------------------------
+
+## Quick introductions
+::: nonincremental
+-   Name
+-   Pronouns
+-   Album recommendation
+:::
+
+------------------------------------------------------------------------
+
+## Demo: Lab instructions and tour of RStudio.
+
+------------------------------------------------------------------------
+
+## Demo: `intro.qmd`
+
+------------------------------------------------------------------------
+
+## Open working time
+
+::: nonincremental
+-   The lab will be due on Gradescope (as a **PDF**) on Tuesday February 3 at 11:59pm.
+- **Important!** Check out out your Gradescope account for this class before Tuesday afternoon. **Now would be a great time!**
+     - You will need the course entry code, which is on the course website and Moodle.
+     - If you have any issues, send me an email **before Tuesday afternoon** and we'll figure it out.
+     - If you have to turn your lab in late, you will need to use at least one of your extension days
+:::
+
+

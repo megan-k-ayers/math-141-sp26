@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!exams/*"
+    - "!labs/data/vitd_subset.csv"
+
+website:
+  title: "Math 141"
+  image: assets/math141-hex.png
+  site-url: "https://www.math-141.github.io/"
+  favicon: assets/favicon.ico
+  navbar:
+    title: false
+    logo: assets/math141-hex.png
+    logo-alt: "Math 141 logo"
+    background: white
+    foreground: "gray-800"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: office_hours.qmd
+        text: Office Hours
+    tools:
+      - icon: chat-dots-fill
+        href: https://math141sp26.slack.com
+        aria-label: Slack
+      - icon: r-circle-fill
+        href: https://rstudio.reed.edu/
+        aria-label: RStudio Server
+      - icon: bar-chart-fill
+        href: https://www.gradescope.com/courses/1225246
+        aria-label: Gradescope
+      - icon: door-closed-fill
+        href: https://moodle.reed.edu/course/view.php?id=6317
+        aria-label: Moodle
+
+format:
+  html:
+    theme:
+      - sandstone
+      - assets/styles.scss
+    toc: true
+
+resources: 
+  - CNAME
+
+editor: visual
+

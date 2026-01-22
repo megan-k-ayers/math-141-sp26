@@ -1,0 +1,37 @@
+---
+toc: false
+editor: source
+page-layout: custom
+resources:
+  - "homepage-readings"
+listing:
+  id: schedule-listing
+  contents: scheduled-docs_files/schedule.yml
+  template: _extensions/qmd-lab/course-website-ejs/schedule-1.ejs
+---
+
+:::::::: content-block
+::::::: grid
+::::: {#banner .g-col-12 .g-col-md-6 style="margin: 3em 1em 0em 1em"}
+:::: {.content-visible unless-profile="staff-site"}
+::: banner-text
+Introduction to Probability and Statistics
+:::
+
+[Math 141 Reed College, Spring 2026]{.smallcaps}
+
+::::
+:::::
+
+::: {#hex .g-col-12 .g-col-md-6 .text-center style="margin: 0em 1em 0em 1em"}
+\
+
+![](assets/math141-hex.png){.img-fluid fig-alt="Hex logo of MATH 141 showing a griffin." width="250"}
+:::
+:::::::
+::::::::
+
+:::: content-block
+::: {#schedule-listing}
+:::
+::::
