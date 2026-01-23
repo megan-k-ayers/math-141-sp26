@@ -1,4 +1,4 @@
-## [www.math-141-sp26.github.io](https://math-141-sp26.github.io/)
+## [https://megan-k-ayers.github.io/math-141-sp26/](https://megan-k-ayers.github.io/math-141-sp26/)
 
 This repository contains source code for the course website for Math 141: Introduction to Probability and Statistics at Reed College, Spring 2026.
 
