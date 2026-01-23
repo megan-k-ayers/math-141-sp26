@@ -26,7 +26,7 @@ editor:
 
 **Links and course resources**:
 
-The course website, [math-141-sp26.github.io](https://math-141-sp26.github.io/), includes information on the course, lecture slides, public course materials, and links to all other course resources:
+The course website, [megan-k-ayers.github.io/math-141-sp26](https://megan-k-ayers.github.io/math-141-sp26/), includes information on the course, lecture slides, public course materials, and links to all other course resources:
 
 -   Textbooks (links on this Syllabus page)
 -   RStudio Server, for working on homework and lab assignments

@@ -118,7 +118,7 @@ Goal 2: Getting Started in Math 141
 :::
 
 ::: {.column width="40%"}
--   The course website, [math-141-sp26.github.io](https://math-141-sp26.github.io/), will be the central location for all our course materials.
+-   The course website, [megan-k-ayers.github.io/math-141-sp26](https://megan-k-ayers.github.io/math-141-sp26/), will be the central location for all our course materials.
 
 -   We'll use a few other resources to navigate Math 141, but everything will be linked/directed to from the course website.
 :::
