@@ -557,7 +557,7 @@
     "href": "slides/lecture01_wk01mon.html#goals-for-today",
     "title": "Math 141",
     "section": "Goals for Today",
-    "text": "Goals for Today\n\nGet to know each other\nGetting started in Math 141\n\nCourse structure and technologies\nWhere to find resources\nCourse expectations\n\nIntroduce statistical thinking\nIntroduce data frames"
+    "text": "Goals for Today\n\nGetting started in Math 141\n\nCourse structure and technologies\nWhere to find resources\nCourse expectations\n\nIntroduce statistical thinking\nIntroduce data frames"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#class-introductions",
@@ -620,7 +620,7 @@
     "href": "slides/lecture01_wk01mon.html#learning-support-resources",
     "title": "Math 141",
     "section": "Learning support resources",
-    "text": "Learning support resources\n\nThe Math 141 Teaching Team are so excited to support your learning!\n\nCourse assistant office hours coming soon on Moodle\n\nEach student is entitled to one hour of individual tutoring per week"
+    "text": "Learning support resources\n\nThe Math 141 Teaching Team are excited to support your learning!\n\nCourse assistant office hours coming soon on Moodle\n\nEach student is entitled to one hour of individual tutoring per week"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#a-typical-week-in-math-141",
@@ -634,7 +634,7 @@
     "href": "slides/lecture01_wk01mon.html#assignments-and-exams",
     "title": "Math 141",
     "section": "Assignments and Exams",
-    "text": "Assignments and Exams\n\n\n\n\nLab assignments (weekly-ish)\n\nAssigned Thursday in lab\nDue the next Tuesday, 11:59pm on Gradescope\nMostly R practice. Please collaborate!\n\n\n\n\n\nHomework assignments (daily-ish)\n\nAssigned on Friday (usually)\nDue the next Friday (usually), 11:59pm on Gradescope\nMostly theory/conceptual, some R. Please collaborate!\n\n\n\n\n\n\n\n\nIn-class activities (semi-regular)\n\nIndividual activities\nGroup activities\n\n\n\n\n\nExams (1 midterm, 1 final)\n\nBoth are written and in-person\nMidterm: 3/12\nFinal: Finals week"
+    "text": "Assignments and Exams\n\n\n\n\nLab assignments (weekly-ish)\n\nAssigned Thursday in lab\nDue the next Tuesday, 11:59pm on Gradescope\nMostly R practice. Please collaborate!\n\n\n\n\n\nHomework assignments (weekly-ish)\n\nAssigned on Friday (usually)\nDue the next Friday (usually), 11:59pm on Gradescope\nMostly theory/conceptual, some R. Please collaborate!\n\n\n\n\n\n\n\n\nIn-class activities (semi-regular)\n\nIndividual activities\nGroup activities\n\n\n\n\n\nExams (1 midterm, 1 final)\n\nBoth are written and in-person\nMidterm: 3/12\nFinal: Finals week"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#expectations-for-submitted-work",
@@ -655,7 +655,7 @@
     "href": "slides/lecture01_wk01mon.html#engagement",
     "title": "Math 141",
     "section": "Engagement",
-    "text": "Engagement\n\nBeing actively present is key. This requires attendance, and can look like:\n\nActive listening\nContributing to discussion at the small group and/or classroom level\nContributing to discussions on Slack\n\nDuring lecture and lab, remove distractions.\n\nWhen we are on our computers, close email, social media, news, etc.\nHide your phone.\n\nI have high expectations but know that all of you (regardless of your stats, math, or computing background) have the ability to meet them.\nWe are all going to make mistakes, we will learn more because of them."
+    "text": "Engagement\n\nBeing actively present is key. This requires attendance, and can look like:\n\nActive listening\nContributing to discussion at the small group and/or classroom level\nContributing to discussions on Slack\n\nMissing more than 4 lectures or 1 lab will have a small, accumulating impact on your grade.\nDuring lecture and lab, remove distractions.\n\nWhen we are on our computers, close email, social media, news, etc.\nHide your phone."
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#course-climate",
@@ -1419,5 +1419,12 @@
     "title": "Math 141",
     "section": "Recap",
     "text": "Recap\nToday we defined:\n\nRandom processes, events, probability, probability models\nLaw of Large Numbers\nAddition Rule and Complement Rule\n\n\nNext time\n\nMore probability rules and an activity!"
+  },
+  {
+    "objectID": "slides/lecture01_wk01mon.html#engagement-1",
+    "href": "slides/lecture01_wk01mon.html#engagement-1",
+    "title": "Math 141",
+    "section": "Engagement",
+    "text": "Engagement\n\nI have high expectations but know that all of you (regardless of your stats, math, or computing background) have the ability to meet them.\nWe are all going to make mistakes, we will learn more because of them."
   }
 ]

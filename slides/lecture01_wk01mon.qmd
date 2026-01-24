@@ -55,7 +55,9 @@ library(tidyverse)
 ::: {style="margin-top: 80px; font-size: 3em; color: #3F6574; text-align: center;"}
 Before we get started...
 
-if you are on the waitlist, please sign in to class here: <https://tinyurl.com/Math141-Waitlst>
+<br><br>
+
+**Attendance/waitlist form check**
 :::
 
 
@@ -64,34 +66,18 @@ if you are on the waitlist, please sign in to class here: <https://tinyurl.com/M
 ## Goals for Today
 
 ::: nonincremental
-1.  Get to know each other
-2.  Getting started in Math 141
+1.  Getting started in Math 141
     i.  Course structure and technologies
     ii. Where to find resources
     iii. Course expectations
-3.  Introduce statistical thinking
-4.  Introduce data frames
+2.  Introduce statistical thinking
+3.  Introduce data frames
 :::
 
 ------------------------------------------------------------------------
 
-::: {style="margin-top: 80px; font-size: 3em; color: #3F6574; text-align: center;"}
-Get to know each other
-:::
 
-------------------------------------------------------------------------
-
-## Class introductions
-
-::: nonincremental
--   Name
--   Pronouns 
--   Share something you're excited about for this semester (Reed-related or not)
-:::
-
-------------------------------------------------------------------------
-
-### A bit more about me
+### A bit about me
 
 - Boise, ID → Lewis & Clark College (Portland) → Yale (New Haven) → back to Portland!
 - My Research Interests:
@@ -103,7 +89,7 @@ Get to know each other
 ------------------------------------------------------------------------
 
 ::: {style="margin-top: 80px; font-size: 2.5em; color: #3F6574; text-align: center;"}
-Goal 2: Getting Started in Math 141
+Getting Started in Math 141
 :::
 
 ------------------------------------------------------------------------
@@ -256,7 +242,7 @@ You will need access to a computer for this course.
 
 ## Learning support resources
 
-- The Math 141 Teaching Team are so excited to support your learning!
+- The Math 141 Teaching Team are excited to support your learning!
     - Course assistant office hours coming soon on Moodle
 - Each student is entitled to [one hour of individual tutoring](https://www.reed.edu/academic_support/individual_tutoring.html) per week
 
@@ -305,7 +291,7 @@ You will need access to a computer for this course.
 
 ::: {.fragment .fade-up}
 
--   **Homework assignments (*daily-ish*)**
+-   **Homework assignments (*weekly-ish*)**
     - Assigned on Friday (usually)
     - Due the next Friday (usually), 11:59pm on **Gradescope**
     - Mostly theory/conceptual, some R. Please collaborate!
@@ -399,14 +385,23 @@ You will need access to a computer for this course.
     -   Active listening
     -   Contributing to discussion at the small group and/or classroom level
     -   Contributing to discussions on Slack
+    
+-   Missing more than 4 lectures or 1 lab will have a small, accumulating impact on your grade.
 
 -   During lecture and lab, remove distractions.
     -   When we are on our computers, close email, social media, news, etc.
     -   Hide your phone.
   
+
+
+------------------------------------------------------------------------
+
+## Engagement
+
+  
 -   I have high expectations but know that all of you (regardless of your stats, math, or computing background) have the ability to meet them.
 
-- We are all going to make mistakes, we will learn more because of them. 
+-   We are all going to make mistakes, we will learn more because of them. 
 
 
 ------------------------------------------------------------------------
