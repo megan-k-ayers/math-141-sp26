@@ -578,7 +578,7 @@
     "href": "slides/lecture01_wk01mon.html#getting-started-in-math-141-1",
     "title": "Math 141",
     "section": "Getting Started in Math 141",
-    "text": "Getting Started in Math 141\nOther Resources\n\n\nReed’s RStudio Server, for coursework,\n\n\n\nA course-wide Slack workspace, for course communication,\n\n\n\nGradescope, for turning in assignments and exams, and\n\n\n\nMoodle, sparingly, for private course materials & info about meeting times/locations\n\n\n\nTextbooks (all free and online)\n\nStatistical Inference via Data Science: A ModernDive into R and the tidyverse, Second Edition (MD)\nIntroduction to Modern Statistics, Second Edition (IMS)\nOpenIntro Statistics, Fourth Edition (OI)"
+    "text": "Getting Started in Math 141\nOther Resources\n\n\nReed’s RStudio Server, for coursework,\n\n\n\nA course-wide Slack workspace, for course communication,\n\n\n\nGradescope, for turning in assignments, and\n\n\n\nMoodle, sparingly, for private course materials & info about meeting times/locations\n\n\n\nTextbooks (all free and online)\n\nStatistical Inference via Data Science: A ModernDive into R and the tidyverse, Second Edition (MD)\nIntroduction to Modern Statistics, Second Edition (IMS)\nOpenIntro Statistics, Fourth Edition (OI)"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#getting-started-in-math-141-2",
@@ -641,7 +641,7 @@
     "href": "slides/lecture01_wk01mon.html#expectations-for-submitted-work",
     "title": "Math 141",
     "section": "Expectations for submitted work",
-    "text": "Expectations for submitted work\n\nAddress questions completely: if you have a partial solution, say so, explain what you’ve tried.\nRespond in full sentences for written answers.\nShow your work.\nWrite comments in your code explaining your work."
+    "text": "Expectations for submitted work\n\nAddress questions completely. If you have a partial solution, say so, explain what you’ve tried.\nRespond in full sentences for written answers.\nShow your work.\nWrite comments in your code explaining your work."
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#late-work",
@@ -676,7 +676,7 @@
     "href": "slides/lecture01_wk01mon.html#artificial-intelligence-ai-policy",
     "title": "Math 141",
     "section": "Artificial Intelligence (AI) Policy",
-    "text": "Artificial Intelligence (AI) Policy\n\nArtificial intelligence (AI) tools, such as ChatGPT, Claude, Gemini, and others are being used to generate code, analyze data, and much more. However, learning to think critically about a problem at hand, and engaging with your peers, tutors, and instructors when not understanding a concept or question are integral components of a liberal arts education. Further, a key goal of this course is for you to learn how to thoughtfully, ethically, and independently extract knowledge from data and engage in statistical reasoning. Therefore, the use of generative AI tools, such as ChatGPT and others, are strictly prohibited in any stage of the work process for this course. If you have questions about whether a tool is allowed for this course, ask the Instructor before using it.\n\n\nWhy this policy?"
+    "text": "Artificial Intelligence (AI) Policy\n\nArtificial intelligence (AI) tools, such as ChatGPT, Claude, Gemini, and others are being used to generate code, analyze data, and much more. However, learning to think critically about a problem at hand, and engaging with your peers, tutors, and instructors when not understanding a concept or question are integral components of a liberal arts education. Further, a key goal of this course is for you to learn how to thoughtfully, ethically, and independently extract knowledge from data and engage in statistical reasoning. Therefore, the use of generative AI tools, such as ChatGPT and others, is strictly prohibited in any stage of the work process for this course. If you have questions about whether a tool is allowed for this course, ask the Instructor before using it."
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#course-or-syllabus-questions",
@@ -697,7 +697,7 @@
     "href": "slides/lecture01_wk01mon.html#learning-outcomes",
     "title": "Math 141",
     "section": "Learning Outcomes",
-    "text": "Learning Outcomes\n\n\n\n\n\nIn this course, you will learn how to think critically with data by engaging in the entire data analysis process.\nMost of our time will be spent in the Exploration and Visualization, Data Wrangling, and Modeling and Inference steps, but we will spend some time in each cog!\n\nFirst ~3 weeks in Exploration and Visualization, Data Wrangling, and Data Acquisition\nNext ~3 weeks in Modeling\nFinal ~half of the course in Inference"
+    "text": "Learning Outcomes\n\n\n\n\n\nIn this course, you will learn how to think critically with data by engaging in the entire data analysis process.\nMost of our time will be spent in the Exploration and Visualization, Data Wrangling, and Modeling and Inference steps, but we will spend some time in each cog!\n\nFirst ~3 weeks in Exploration and Visualization, Data Wrangling, and Data Acquisition\nNext ~2 weeks in Modeling\nNext ~6 weeks of the course in Inference\nFinal weeks combining Modeling and Inference"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#math-141-is-about-developing-our-statistical-thinking-skills.",
@@ -725,28 +725,28 @@
     "href": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-2",
     "title": "Math 141",
     "section": "Example: Visualizing COVID Prevalence",
-    "text": "Example: Visualizing COVID Prevalence\n\n\n\n\n\n\nAt a quick first glance, what story does the graph appear to be telling?\nWhat is misleading about the graph? How could we fix this issue?"
+    "text": "Example: Visualizing COVID Prevalence\n\n\n\n\n\n\nAt a quick first glance, what story does the graph appear to be telling?"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-3",
     "href": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-3",
     "title": "Math 141",
     "section": "Example: Visualizing COVID Prevalence",
-    "text": "Example: Visualizing COVID Prevalence\n\nAfter public outcry, the Georgia Department of Public Health said they made a mistake and updated the graph:"
+    "text": "Example: Visualizing COVID Prevalence\n\n\n\n\n\n\nWhat is misleading about the graph? How could we fix this issue?"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-4",
     "href": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-4",
     "title": "Math 141",
     "section": "Example: Visualizing COVID Prevalence",
-    "text": "Example: Visualizing COVID Prevalence\n\nAfter public outcry, the Georgia Department of Public Health said they made a mistake and updated the graph:\n\n\n\n\n\n\n\nHow do your conclusions about COVID-19 cases in Georgia change when now interpreting this new graph?"
+    "text": "Example: Visualizing COVID Prevalence\n\nAfter public outcry, the Georgia Department of Public Health updated the graph:"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-5",
     "href": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-5",
     "title": "Math 141",
     "section": "Example: Visualizing COVID Prevalence",
-    "text": "Example: Visualizing COVID Prevalence\nAlberto Cairo, a journalist and designer, created the second graph of the Georgia COVID-19 data:\n\n \n\n\nA key principle of data visualization is to “help the viewer make meaningful comparisons”.\nWhat comparisons are made easy by the lefthand graph? What about by the righthand graph?"
+    "text": "Example: Visualizing COVID Prevalence\n\nAfter public outcry, the Georgia Department of Public Health updated the graph:\n\n\n\n\n\n\n\nHow do your conclusions about COVID-19 cases in Georgia change when interpreting the new graph?"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#statistical-thinking",
@@ -795,7 +795,7 @@
     "href": "slides/lecture01_wk01mon.html#next-time",
     "title": "Math 141",
     "section": "Next time",
-    "text": "Next time\n\nIntroduction to data visualization"
+    "text": "Next time\n\nIntroduction to data visualization!"
   },
   {
     "objectID": "readings/reading08_wk02fri.html",
@@ -1426,5 +1426,12 @@
     "title": "Math 141",
     "section": "Engagement",
     "text": "Engagement\n\nI have high expectations but know that all of you (regardless of your stats, math, or computing background) have the ability to meet them.\nWe are all going to make mistakes, we will learn more because of them."
+  },
+  {
+    "objectID": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-6",
+    "href": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-6",
+    "title": "Math 141",
+    "section": "Example: Visualizing COVID Prevalence",
+    "text": "Example: Visualizing COVID Prevalence\nAlberto Cairo, a journalist and designer, created the second graph of the Georgia COVID-19 data:\n\n \n\n\nA key principle of data visualization is to “help the viewer make meaningful comparisons”.\nWhat comparisons are made easy by the lefthand graph? What about by the righthand graph?"
   }
 ]

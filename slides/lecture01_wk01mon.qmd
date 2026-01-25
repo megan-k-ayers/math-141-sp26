@@ -86,6 +86,8 @@ Before we get started...
     - Text as data
     - R programming
 
+- I'm looking forward to getting to know each other more in lab! 
+
 ------------------------------------------------------------------------
 
 ::: {style="margin-top: 80px; font-size: 2.5em; color: #3F6574; text-align: center;"}
@@ -131,7 +133,7 @@ A course-wide **Slack** workspace, for course communication,
 <br>
 
 ::: {.fragment .fade-up .midi style="font-size: 0.9em;"}
-**Gradescope**, for turning in assignments and exams, and
+**Gradescope**, for turning in assignments, and
 :::
 
 <br>
@@ -164,40 +166,40 @@ You will need access to a computer for this course.
 
 **Please let me know ASAP after class or via email if you do not have access to a personal computer.**
 
-------------------------------------------------------------------------
+<!-- ------------------------------------------------------------------------ -->
 
-## Getting Started in Math 141
-#### Finding Resources
+<!-- ## Getting Started in Math 141 -->
+<!-- #### Finding Resources -->
 
-::: columns
-::: {.column width="20%"}
-:::
+<!-- ::: columns -->
+<!-- ::: {.column width="20%"} -->
+<!-- ::: -->
 
-::: {.column width="60%"}
-![](img/course-website.png){fig-align="center"}
-:::
+<!-- ::: {.column width="60%"} -->
+<!-- ![](img/course-website.png){fig-align="center"} -->
+<!-- ::: -->
 
-::: {.column width="20%"}
-:::
-:::
+<!-- ::: {.column width="20%"} -->
+<!-- ::: -->
+<!-- ::: -->
 
-------------------------------------------------------------------------
+<!-- ------------------------------------------------------------------------ -->
 
-## Getting Started in Math 141
-#### Finding Resources
+<!-- ## Getting Started in Math 141 -->
+<!-- #### Finding Resources -->
 
-::: columns
-::: {.column width="15%"}
-:::
+<!-- ::: columns -->
+<!-- ::: {.column width="15%"} -->
+<!-- ::: -->
 
-::: {.column width="70%"}
-![](img/resources1.png){fig-align='center'}
+<!-- ::: {.column width="70%"} -->
+<!-- ![](img/resources1.png){fig-align='center'} -->
 
-:::
+<!-- ::: -->
 
-::: {.column width="15%"}
-:::
-:::
+<!-- ::: {.column width="15%"} -->
+<!-- ::: -->
+<!-- ::: -->
 
 
 ------------------------------------------------------------------------
@@ -334,7 +336,7 @@ You will need access to a computer for this course.
 
 ## Expectations for submitted work
 
-- Address questions completely: if you have a partial solution, say so, explain what you've tried.
+- Address questions completely. If you have a partial solution, say so, explain what you've tried.
 - Respond in full sentences for written answers.
 - Show your work.
 - Write comments in your code explaining your work.
@@ -438,11 +440,10 @@ If you plan to request academic accommodations, please submit these **through th
 
 ::: blockquote
 
-Artificial intelligence (AI) tools, such as ChatGPT, Claude, Gemini, and others are being used to generate code, analyze data, and much more. However, learning to think critically about a problem at hand, and engaging with your peers, tutors, and instructors when not understanding a concept or question are integral components of a liberal arts education. Further, a key goal of this course is for you to learn how to thoughtfully, ethically, and independently extract knowledge from data and engage in statistical reasoning. Therefore, the use of generative AI tools, such as ChatGPT and others, are strictly prohibited in any stage of the work process for this course. If you have questions about whether a tool is allowed for this course, ask the Instructor before using it.
+Artificial intelligence (AI) tools, such as ChatGPT, Claude, Gemini, and others are being used to generate code, analyze data, and much more. However, learning to think critically about a problem at hand, and engaging with your peers, tutors, and instructors when not understanding a concept or question are integral components of a liberal arts education. Further, a key goal of this course is for you to learn how to thoughtfully, ethically, and independently extract knowledge from data and engage in statistical reasoning. Therefore, the use of generative AI tools, such as ChatGPT and others, is strictly prohibited in any stage of the work process for this course. If you have questions about whether a tool is allowed for this course, ask the Instructor before using it.
 
 :::
 
-- Why this policy?
 
 ------------------------------------------------------------------------
 
@@ -472,21 +473,22 @@ Artificial intelligence (AI) tools, such as ChatGPT, Claude, Gemini, and others 
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="45%"}
 
 ![](img/DAW.jpeg)
 
 :::
 
 
-::: {.column width="50%"}
+::: {.column width="55%"}
 
 -   In this course, you will learn how to think critically with data by engaging in the entire data analysis process.
 
 -   Most of our time will be spent in the **Exploration and Visualization**, **Data Wrangling**,  and **Modeling and Inference** steps, but we will spend some time in each cog!
     - First ~3 weeks in **Exploration and Visualization**, **Data Wrangling**, and **Data Acquisition**
-    - Next ~3 weeks in **Modeling**
-    - Final ~half of the course in **Inference**
+    - Next ~2 weeks in **Modeling**
+    - Next ~6 weeks of the course in **Inference**
+    - Final weeks combining **Modeling** and **Inference**
 
 :::
 
@@ -554,11 +556,9 @@ Will use a wide-range of **real** and **relevant** data examples
 ## Example: Visualizing COVID Prevalence
 
 ::: nonincremental
-![](img/GAcovid.jpg){width="60%" fig-align="center"}
+![](img/GAcovid.jpg){width="70%" fig-align="center"}
 
 -   At a quick first glance, what story does the graph appear to be telling?
-
--   What is misleading about the graph? How could we fix this issue?
 
 :::
 
@@ -566,10 +566,23 @@ Will use a wide-range of **real** and **relevant** data examples
 
 ## Example: Visualizing COVID Prevalence
 
--   After public outcry, the Georgia Department of Public Health said they made a mistake and updated the graph:
+::: nonincremental
+![](img/GAcovid.jpg){width="70%" fig-align="center"}
+
+-   What is misleading about the graph? How could we fix this issue?
+
+:::
+
+------------------------------------------------------------------------
+
+
+
+## Example: Visualizing COVID Prevalence
+
+-   After public outcry, the Georgia Department of Public Health updated the graph:
 
 ::: {.fragment .midi}
-![](img/GAcovid2.jpg){fig-align="center" width="60%"}
+![](img/GAcovid2.jpg){fig-align="center" width="70%"}
 :::
 
 
@@ -578,11 +591,11 @@ Will use a wide-range of **real** and **relevant** data examples
 ## Example: Visualizing COVID Prevalence
 
 ::: nonincremental
--   After public outcry, the Georgia Department of Public Health said they made a mistake and updated the graph:
+-   After public outcry, the Georgia Department of Public Health updated the graph:
 
-![](img/GAcovid2.jpg){fig-align="center" width="40%"}
+![](img/GAcovid2.jpg){fig-align="center" width="50%"}
 
--   How do your conclusions about COVID-19 cases in Georgia change when now interpreting this new graph?
+-   How do your conclusions about COVID-19 cases in Georgia change when interpreting the new graph?
 
 :::
 
@@ -593,7 +606,7 @@ Will use a wide-range of **real** and **relevant** data examples
 Alberto Cairo, a journalist and designer, created the second graph of the Georgia COVID-19 data:
 
 ::: {.fragment .midi}
-![](img/GAcovid2.jpg){width="50%"} ![](img/GAcovid_cairo.png){width="40%"}
+![](img/GAcovid2.jpg){width="50%"} ![](img/GAcovid_cairo.png){width="45%"}
 :::
 
 -   A key principle of data visualization is to **"help the viewer make meaningful comparisons"**.
@@ -753,5 +766,5 @@ Example questions:
 ------------------------------------------------------------------------
 
 ## Next time
-- Introduction to data visualization
+- Introduction to data visualization!
 

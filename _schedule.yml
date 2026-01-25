@@ -16,8 +16,8 @@ scheduled-docs:
           docs:
             - type: Reading
               href: readings/reading01_wk01mon.qmd
-            # - type: Slides
-            #   href: slides/lecture01_wk01mon.qmd
+            - type: Slides
+              href: slides/lecture01_wk01mon.qmd
         - topic: "Data Visualization Introduction"
           display-date: Wednesday, Jan 28
           date: 1/28/26
