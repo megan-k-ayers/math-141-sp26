@@ -104,7 +104,7 @@ By the end of the course, you will have improved your data acumen and your abili
     - Reading abbreviation: **OI**
 
 
-**Technologies (R, RStudio, and Quarto)**: R is a free and open source programming language, RStudio is an Integrated Development Environment (IDE) which allows for streamlined use of the R programming language, and Quarto is a markdown language that allows for reproducible documents that include R code, text, images, and much more! We will access these technologies via the [RStudio Server](https://www.rstudio.reed.edu) for this course. A laptop that can access the internet and use the RStudio Server is required for this course.
+**Technologies (R, RStudio, and Quarto)**: R is a free and open source programming language, RStudio is an Integrated Development Environment (IDE) which allows for streamlined use of the R programming language, and Quarto is a markdown language that allows for reproducible documents that include R code, text, images, and much more! We will access these technologies via the [RStudio Server](https://rstudio.reed.edu/) for this course. A laptop that can access the internet and use the RStudio Server is required for this course.
 
 \textbf{Please let me know ASAP if you do not have access to a personal computer!}
 
