@@ -52,12 +52,11 @@ library(tidyverse)
 
 ------------------------------------------------------------------------
 
-::: {style="margin-top: 80px; font-size: 3em; color: #3F6574; text-align: center;"}
 
-Before we get started...
+### Announcements/reminders
 
-if you are on the waitlist, please sign in to class here: <https://tinyurl.com/Math141-Waitlst>
-:::
+- Waitlist movement - let me know if you're still on the waitlist and haven't heard from me
+- Readings posted Fridays for the following week, slides right after lecture
 
 
 ------------------------------------------------------------------------
@@ -67,18 +66,18 @@ if you are on the waitlist, please sign in to class here: <https://tinyurl.com/M
 
 ::: nonincremental
 -  Introductions
--  Discussed big picture statistical thinking
+-  Statistical thinking
 -  Introduced data frames
 :::
 
 ### Goals for Today
 
 ::: nonincremental
--   Review data frames.
--   Motivate data visualizations.
--   Develop **language** to talk about the components of a graphic.
--   Practice deconstructing graphics.
--   Discuss good graphical practices.
+-   Review data frames
+-   Motivate data visualizations
+-   Develop **language** to talk about the components of a graphic
+-   Practice deconstructing graphics
+-   Discuss good graphical practices
 :::
 
 <!-- ------------------------------------------------------------------------ -->
@@ -95,11 +94,11 @@ if you are on the waitlist, please sign in to class here: <https://tinyurl.com/M
 <!--     - Individual tutoring -->
     
     
-## Math 141 Office Hours Schedule {.center}
+<!-- ## Math 141 Office Hours Schedule {.center} -->
 
-::: nonincremental
-- On [Moodle](https://moodle.reed.edu/course/view.php?id=6317)
-:::
+<!-- ::: nonincremental -->
+<!-- - On [Moodle](https://moodle.reed.edu/course/view.php?id=6317) -->
+<!-- ::: -->
 
 
 ## Data Frames
@@ -183,8 +182,8 @@ Columns = Variables
 
 ::: {.column width = "50%"}
 
--   **Categorical**: Values are categories
-    - Usually take \textit{non-numeric} values (e.g., Race/Ethnicity or Gender)
+-   **Categorical**: Values represent categories
+    - Usually take *non-numeric* values (e.g., Race/Ethnicity or Gender)
     - But can take numeric values! (e.g., zip code)
     - The values that a categorical variable can take are called its **levels** 
     - **Ordinal** categorical variables can be ordered (e.g., level of education, variables collected with a Likert scale)
@@ -308,7 +307,7 @@ Create our own graphs with the `R` package `ggplot2`.
 
 -   **data**: Data frame that contains the raw data
     -   Columns are variables used in the graph
--   **geom**: Geometric **shape** that the data are mapped to.
+-   **geom**: Geometric **form** that the data are mapped to.
     -   EX: Point, line, bar, text, ...
 -   **aesthetic**: Visual properties of the **geom**
     -   EX: X (horizontal) position, y (vertical) position, color, fill, shape
@@ -323,13 +322,13 @@ For right now, we won't focus on the **names** of particular types of graphs (e.
 ------------------------------------------------------------------------
 
 :::::: columns
-:::: {.column width="30%"}
-### Example 1
+:::: {.column width="40%"}
+### Example 1: Think-pair-share
 
 ::: nonincremental
 -   What are the variables?
--   What **geom** are the variables map to?
--   What are the **aesthetic**s of the **geom**?
+-   What **geom** (i.e. shape, form) are the variables mapped to?
+-   What are the **aesthetic**s (visual properties) of the **geom**?
 -   How is each variable mapped to an **aesthetic**?
 -   What additional context is provided? Is any missing?
 -   What story is the graph telling?
@@ -350,11 +349,11 @@ countdown::countdown(5)
 
 :::::: columns
 :::: {.column width="30%"}
-### Example 2
+### Example 2: Think-pair-share
 
 ::: nonincremental
 -   What are the variables?
--   What **geom** are the variables map to?
+-   What **geom** are the variables mapped to?
 -   What are the **aesthetic**s of the **geom**?
 -   How is each variable mapped to an **aesthetic**?
 -   What additional context is provided? Is any missing?
@@ -369,7 +368,7 @@ countdown::countdown(5)
 
 ```{r}
 #| echo: false
-countdown::countdown(5)
+countdown::countdown(4)
 ```
 
 # Visualization Considerations
@@ -410,33 +409,15 @@ countdown::countdown(5)
 
 ### What visual cues are easier to compare?
 
-![](img/visual_cues.png){width="35%" fig-align="center"}
+![](img/visual_cues.png){width="40%" fig-align="center"}
 
 ------------------------------------------------------------------------
 
 ### What to consider with color?
 
-Consider color blindness.
+Consider color blindness [(click here for a helpful tool for picking colors)](https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40).
 
-```{r, echo = FALSE, fig.asp = .4}
-library(colorBlindness)
-mat <- matrix(1:81, nrow = 9, ncol = 9)
-
-library(ggplot2)
-library(reshape2)
-mat1 <- melt(t(mat[9:1, ]))
-len <- length(Blue2DarkRed12Steps)-1
-mat1$v2 <- cut(mat1$value,
-              breaks = seq(0,ceiling(81/len)*len, 
-                           length.out = len+1))
-ht <- ggplot(mat1) + 
-  geom_tile(aes(x=Var1, y=Var2, fill=v2)) + 
-  scale_fill_manual(values=Blue2DarkRed12Steps) + 
-  theme_bw() +
-  guides(fill = 'none')
-# check the plot by CVD simulator
-cvdPlot(ht)
-```
+![](img/color_blind_palette.png){width="55%" fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -452,7 +433,7 @@ Maps, like the [Dude map](https://qz.com/316906/the-dude-map-how-american-men-re
 
 ### Color Palettes -- Diverging
 
-![](img/nba_2015.png){width="70%" fig-align="center"}
+![](img/nba_2015.png){width="90%" fig-align="center"}
 
 ::: {aside}
 [Adam Pearce's 2015 NBA Games](https://roadtolarissa.com/nba-minutes/)
@@ -462,21 +443,12 @@ Maps, like the [Dude map](https://qz.com/316906/the-dude-map-how-american-men-re
 
 ### Color Palettes -- Qualitative
 
-![](img/dogs.png){width="60%" fig-align="center"}
+![](img/dogs.png){width="70%" fig-align="center"}
 
 ::: {aside}
 [information is beautiful's Best in Show](https://www.informationisbeautiful.net/visualizations/best-in-show-whats-the-top-data-dog/)
 :::
 
-------------------------------------------------------------------------
-
-## Many Ways To Visually Tell A Story
-
-Washington Post's Approach:
-
-![](img/wp_shooter.png){width="50%" fig-align="center"}
-
-[Periscopic's Approach](https://guns.periscopic.com/?year=2013)
 
 ------------------------------------------------------------------------
 

@@ -148,26 +148,27 @@
 </section>
 <section class="slide level2">
 
-<div style="margin-top: 80px; font-size: 3em; color: #3F6574; text-align: center;">
-<p>Before we get started…</p>
-<p>if you are on the waitlist, please sign in to class here: <a href="https://tinyurl.com/Math141-Waitlst" class="uri">https://tinyurl.com/Math141-Waitlst</a></p>
-</div>
+<h3 id="announcementsreminders">Announcements/reminders</h3>
+<ul>
+<li class="fragment">Waitlist movement - let me know if you’re still on the waitlist and haven’t heard from me</li>
+<li class="fragment">Readings posted Fridays for the following week, slides right after lecture</li>
+</ul>
 </section>
 <section class="slide level2">
 
 <h3 id="last-time">Last Time</h3>
 <ul>
 <li>Introductions</li>
-<li>Discussed big picture statistical thinking</li>
+<li>Statistical thinking</li>
 <li>Introduced data frames</li>
 </ul>
 <h3 id="goals-for-today">Goals for Today</h3>
 <ul>
-<li>Review data frames.</li>
-<li>Motivate data visualizations.</li>
-<li>Develop <strong>language</strong> to talk about the components of a graphic.</li>
-<li>Practice deconstructing graphics.</li>
-<li>Discuss good graphical practices.</li>
+<li>Review data frames</li>
+<li>Motivate data visualizations</li>
+<li>Develop <strong>language</strong> to talk about the components of a graphic</li>
+<li>Practice deconstructing graphics</li>
+<li>Discuss good graphical practices</li>
 </ul>
 <!-- ------------------------------------------------------------------------ -->
 <!-- ## Reminders -->
@@ -179,12 +180,10 @@
 <!--     - Coverage every week day!  -->
 <!-- -   Other resources -->
 <!--     - Individual tutoring -->
-</section>
-<section id="math-141-office-hours-schedule" class="slide level2 center">
-<h2>Math 141 Office Hours Schedule</h2>
-<ul>
-<li>On <a href="https://moodle.reed.edu/course/view.php?id=6317">Moodle</a></li>
-</ul>
+<!-- ## Math 141 Office Hours Schedule {.center} -->
+<!-- ::: nonincremental -->
+<!-- - On [Moodle](https://moodle.reed.edu/course/view.php?id=6317) -->
+<!-- ::: -->
 </section>
 <section id="data-frames" class="slide level2">
 <h2>Data Frames</h2>
@@ -389,9 +388,9 @@
 </ul>
 </div><div class="column" style="width:50%;">
 <ul>
-<li class="fragment"><strong>Categorical</strong>: Values are categories
+<li class="fragment"><strong>Categorical</strong>: Values represent categories
 <ul>
-<li class="fragment">Usually take values (e.g., Race/Ethnicity or Gender)</li>
+<li class="fragment">Usually take <em>non-numeric</em> values (e.g., Race/Ethnicity or Gender)</li>
 <li class="fragment">But can take numeric values! (e.g., zip code)</li>
 <li class="fragment">The values that a categorical variable can take are called its <strong>levels</strong></li>
 <li class="fragment"><strong>Ordinal</strong> categorical variables can be ordered (e.g., level of education, variables collected with a Likert scale)</li>
@@ -498,7 +497,7 @@
 <ul>
 <li class="fragment">Columns are variables used in the graph</li>
 </ul></li>
-<li class="fragment"><strong>geom</strong>: Geometric <strong>shape</strong> that the data are mapped to.
+<li class="fragment"><strong>geom</strong>: Geometric <strong>form</strong> that the data are mapped to.
 <ul>
 <li class="fragment">EX: Point, line, bar, text, …</li>
 </ul></li>
@@ -519,12 +518,12 @@
 <section class="slide level2">
 
 <div class="columns">
-<div class="column" style="width:30%;">
-<h3 id="example-1">Example 1</h3>
+<div class="column" style="width:40%;">
+<h3 id="example-1-think-pair-share">Example 1: Think-pair-share</h3>
 <ul>
 <li>What are the variables?</li>
-<li>What <strong>geom</strong> are the variables map to?</li>
-<li>What are the <strong>aesthetic</strong>s of the <strong>geom</strong>?</li>
+<li>What <strong>geom</strong> (i.e.&nbsp;shape, form) are the variables mapped to?</li>
+<li>What are the <strong>aesthetic</strong>s (visual properties) of the <strong>geom</strong>?</li>
 <li>How is each variable mapped to an <strong>aesthetic</strong>?</li>
 <li>What additional context is provided? Is any missing?</li>
 <li>What story is the graph telling?</li>
@@ -538,7 +537,7 @@
 </div></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_321dba29" minutes="5" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_653c5b03" minutes="5" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -546,10 +545,10 @@
 
 <div class="columns">
 <div class="column" style="width:30%;">
-<h3 id="example-2">Example 2</h3>
+<h3 id="example-2-think-pair-share">Example 2: Think-pair-share</h3>
 <ul>
 <li>What are the variables?</li>
-<li>What <strong>geom</strong> are the variables map to?</li>
+<li>What <strong>geom</strong> are the variables mapped to?</li>
 <li>What are the <strong>aesthetic</strong>s of the <strong>geom</strong>?</li>
 <li>How is each variable mapped to an <strong>aesthetic</strong>?</li>
 <li>What additional context is provided? Is any missing?</li>
@@ -564,7 +563,7 @@
 </div></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_98bfbe20" minutes="5" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_d98fe3e8" minutes="4" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
 </div>
 </div>
 </section>
@@ -616,22 +615,18 @@
 <h3 id="what-visual-cues-are-easier-to-compare">What visual cues are easier to compare?</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/visual_cues.png" class="quarto-figure quarto-figure-center" style="width:35.0%"></p>
+<p><img data-src="img/visual_cues.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
 </figure>
 </div>
 </section>
 <section class="slide level2">
 
 <h3 id="what-to-consider-with-color">What to consider with color?</h3>
-<p>Consider color blindness.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+<p>Consider color blindness <a href="https://davidmathlogic.com/colorblind/#%23D81B60-%231E88E5-%23FFC107-%23004D40">(click here for a helpful tool for picking colors)</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture02_wk01wed_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="img/color_blind_palette.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
 </figure>
-</div>
-</div>
 </div>
 </section>
 <section class="slide level2">
@@ -651,7 +646,7 @@
 <h3 id="color-palettes-diverging">Color Palettes – Diverging</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/nba_2015.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="img/nba_2015.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
 </figure>
 </div>
 <div class="{aside}">
@@ -663,22 +658,12 @@
 <h3 id="color-palettes-qualitative">Color Palettes – Qualitative</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/dogs.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+<p><img data-src="img/dogs.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 <div class="{aside}">
 <p><a href="https://www.informationisbeautiful.net/visualizations/best-in-show-whats-the-top-data-dog/">information is beautiful’s Best in Show</a></p>
 </div>
-</section>
-<section id="many-ways-to-visually-tell-a-story" class="slide level2">
-<h2>Many Ways To Visually Tell A Story</h2>
-<p>Washington Post’s Approach:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/wp_shooter.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
-</figure>
-</div>
-<p><a href="https://guns.periscopic.com/?year=2013">Periscopic’s Approach</a></p>
 </section>
 <section id="bad-graphics" class="slide level2">
 <h2>Bad Graphics</h2>

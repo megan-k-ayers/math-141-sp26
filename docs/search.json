@@ -942,7 +942,7 @@
     "href": "slides/lecture02_wk01wed.html#types-of-variables",
     "title": "Math 141",
     "section": "Types of variables",
-    "text": "Types of variables\n\n\n\nIdentification: Uniquely identify each case\n\n\n\nQuantitative: Numerical in nature\n\nThose that can take a range of values are called continuous (e.g., age, income)\nThose that only take particular (often whole number) values are called discrete (e.g., result of a dice roll)\nNot every variable involving numbers is quantitative!\n\n\n\n\nCategorical: Values are categories\n\nUsually take values (e.g., Race/Ethnicity or Gender)\nBut can take numeric values! (e.g., zip code)\nThe values that a categorical variable can take are called its levels\nOrdinal categorical variables can be ordered (e.g., level of education, variables collected with a Likert scale)\nCategorical variables that cannot be ordered are called nominal (e.g., Race/Ethnicity)"
+    "text": "Types of variables\n\n\n\nIdentification: Uniquely identify each case\n\n\n\nQuantitative: Numerical in nature\n\nThose that can take a range of values are called continuous (e.g., age, income)\nThose that only take particular (often whole number) values are called discrete (e.g., result of a dice roll)\nNot every variable involving numbers is quantitative!\n\n\n\n\nCategorical: Values represent categories\n\nUsually take non-numeric values (e.g., Race/Ethnicity or Gender)\nBut can take numeric values! (e.g., zip code)\nThe values that a categorical variable can take are called its levels\nOrdinal categorical variables can be ordered (e.g., level of education, variables collected with a Likert scale)\nCategorical variables that cannot be ordered are called nominal (e.g., Race/Ethnicity)"
   },
   {
     "objectID": "slides/lecture02_wk01wed.html#why-construct-a-graph",
@@ -998,7 +998,7 @@
     "href": "slides/lecture02_wk01wed.html#grammar-of-graphics",
     "title": "Math 141",
     "section": "Grammar of Graphics",
-    "text": "Grammar of Graphics\n\ndata: Data frame that contains the raw data\n\nColumns are variables used in the graph\n\ngeom: Geometric shape that the data are mapped to.\n\nEX: Point, line, bar, text, …\n\naesthetic: Visual properties of the geom\n\nEX: X (horizontal) position, y (vertical) position, color, fill, shape\n\nscale: Controls how data are mapped to the visual values of the aesthetic.\n\nEX: particular colors, log scale\n\nguide: Legend/key to help user convert visual display back to the data\n\n\nFor right now, we won’t focus on the names of particular types of graphs (e.g., scatterplot) but on the elements of graphs."
+    "text": "Grammar of Graphics\n\ndata: Data frame that contains the raw data\n\nColumns are variables used in the graph\n\ngeom: Geometric form that the data are mapped to.\n\nEX: Point, line, bar, text, …\n\naesthetic: Visual properties of the geom\n\nEX: X (horizontal) position, y (vertical) position, color, fill, shape\n\nscale: Controls how data are mapped to the visual values of the aesthetic.\n\nEX: particular colors, log scale\n\nguide: Legend/key to help user convert visual display back to the data\n\n\nFor right now, we won’t focus on the names of particular types of graphs (e.g., scatterplot) but on the elements of graphs."
   },
   {
     "objectID": "slides/lecture02_wk01wed.html#many-ways-to-visually-tell-a-story",
