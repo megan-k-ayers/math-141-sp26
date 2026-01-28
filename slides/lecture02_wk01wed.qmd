@@ -488,7 +488,7 @@ Be careful that your design choices don't cause your viewer to draw incorrect co
 
 
 
-# [The DataLab @ Reed](https://www.reed.edu/data-at-reed/data_lab/)
+<!-- # [The DataLab @ Reed](https://www.reed.edu/data-at-reed/data_lab/) -->
 
 ## Next time
 

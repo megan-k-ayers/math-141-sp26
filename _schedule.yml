@@ -24,8 +24,8 @@ scheduled-docs:
           docs:
             - type: Reading
               href: readings/reading02_wk01wed.qmd
-            # - type: Slides
-            #   href: slides/lecture02_wk01wed.qmd
+            - type: Slides
+              href: slides/lecture02_wk01wed.qmd
         - topic: "Lab: Introduction to R, RStudio, and Quarto"
           display-date: Thursday, Jan 29
           date: 1/29/26

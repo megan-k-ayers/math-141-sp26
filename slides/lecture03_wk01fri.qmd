@@ -55,8 +55,9 @@ library(tidyverse)
 
 ### Reminders/Announcements
 
--   If you plan to request academic accommodations, please submit these **through the DAR student portal**
+-   If you plan to request academic accommodations, please submit these through the **DAR student portal**
 -   Course assistant office hours are now on Moodle
+-   [The DataLab @ Reed](https://www.reed.edu/data-at-reed/data_lab/)
 
 
 ------------------------------------------------------------------------
