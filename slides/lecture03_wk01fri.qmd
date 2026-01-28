@@ -53,9 +53,10 @@ library(tidyverse)
 ------------------------------------------------------------------------
 
 
-### Reminder
+### Reminders/Announcements
 
-If you plan to request academic accommodations, please submit these **through the DAR student portal** as soon as possible. 
+-   If you plan to request academic accommodations, please submit these **through the DAR student portal**
+-   Course assistant office hours are now on Moodle
 
 
 ------------------------------------------------------------------------
@@ -173,6 +174,10 @@ ggplot(data = ---, mapping = aes(---)) +
 ```
 
 -   There are other layers, such as `scale_---_---()` and `labs()`, but we will wait on those.
+
+<br>
+
+-   We are about to touch on many details of graphs - focus on recognizing this general pattern, revisit the slides to refresh on the coding specifics
 
 ------------------------------------------------------------------------
 
@@ -343,12 +348,14 @@ ggplot(data = biketown,
 ------------------------------------------------------------------------
 
 ## Barplots
-
-```{r bar}
-#| output-location: column
+```{r, echo = FALSE}
 # Ignore this line - just pulling out month 
 biketown$month <- gsub("^([0-9]{1,2})/.*", "\\1",
                        biketown$StartDate)
+```
+
+```{r bar}
+#| output-location: column
 
 ggplot(data = biketown, 
        mapping = aes(x = month)) +
@@ -568,6 +575,8 @@ ggplot(data = near_Reed,
 
 
 ## A speedy peek at advanced techniques! 
+
+If we run out of time, we'll pick this back up during lab next Thursday.
 
 
 ## Faceting

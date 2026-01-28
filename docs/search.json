@@ -298,7 +298,7 @@
     "href": "slides/lecture03_wk01fri.html#ggplot2-example-code",
     "title": "Math 141",
     "section": "ggplot2 example code",
-    "text": "ggplot2 example code\nGuiding Principle: We will map variables from the data to the aesthetic attributes (e.g. location, size, shape, color) of geometric objects (e.g. points, lines, bars).\n\nggplot(data = ---, mapping = aes(---)) +\n  geom_---(---) \n\n\nThere are other layers, such as scale_---_---() and labs(), but we will wait on those."
+    "text": "ggplot2 example code\nGuiding Principle: We will map variables from the data to the aesthetic attributes (e.g. location, size, shape, color) of geometric objects (e.g. points, lines, bars).\n\nggplot(data = ---, mapping = aes(---)) +\n  geom_---(---) \n\n\nThere are other layers, such as scale_---_---() and labs(), but we will wait on those.\n\n\n\nWe are about to touch on many details of graphs - focus on recognizing this general pattern, revisit the slides to refresh on the coding specifics"
   },
   {
     "objectID": "slides/lecture03_wk01fri.html#histograms",
@@ -368,7 +368,7 @@
     "href": "slides/lecture03_wk01fri.html#barplots",
     "title": "Math 141",
     "section": "Barplots",
-    "text": "Barplots\n\n\n# Ignore this line - just pulling out month \nbiketown$month &lt;- gsub(\"^([0-9]{1,2})/.*\", \"\\\\1\",\n                       biketown$StartDate)\n\nggplot(data = biketown, \n       mapping = aes(x = month)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\nBoxplots and histograms show the overall distribution of quantitative variables\nBarplots show the distribution of quantitative variables within distinct levels defined by a categorical variable"
+    "text": "Barplots\n\n\nggplot(data = biketown, \n       mapping = aes(x = month)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\nBoxplots and histograms show the overall distribution of quantitative variables\nBarplots show the distribution of quantitative variables within distinct levels defined by a categorical variable"
   },
   {
     "objectID": "slides/lecture03_wk01fri.html#barplots-1",
@@ -466,7 +466,7 @@
     "href": "slides/lecture03_wk01fri.html#a-speedy-peek-at-advanced-techniques",
     "title": "Math 141",
     "section": "A speedy peek at advanced techniques!",
-    "text": "A speedy peek at advanced techniques!"
+    "text": "A speedy peek at advanced techniques!\nIf we run out of time, we’ll pick this back up during lab next Thursday."
   },
   {
     "objectID": "slides/lecture03_wk01fri.html#faceting",

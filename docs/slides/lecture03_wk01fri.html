@@ -210,8 +210,11 @@
 </section>
 <section class="slide level2">
 
-<h3 id="reminder">Reminder</h3>
-<p>If you plan to request academic accommodations, please submit these <strong>through the DAR student portal</strong> as soon as possible.</p>
+<h3 id="remindersannouncements">Reminders/Announcements</h3>
+<ul>
+<li class="fragment">If you plan to request academic accommodations, please submit these <strong>through the DAR student portal</strong></li>
+<li class="fragment">Course assistant office hours are now on Moodle</li>
+</ul>
 </section>
 <section class="slide level2">
 
@@ -361,6 +364,10 @@ $ MultipleRental   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, F
 </div>
 <ul>
 <li class="fragment">There are other layers, such as <code>scale_---_---()</code> and <code>labs()</code>, but we will wait on those.</li>
+</ul>
+<p><br></p>
+<ul>
+<li class="fragment">We are about to touch on many details of graphs - focus on recognizing this general pattern, revisit the slides to refresh on the coding specifics</li>
 </ul>
 </section>
 <section id="histograms" class="slide level2">
@@ -559,13 +566,9 @@ $ MultipleRental   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, F
 <h2>Barplots</h2>
 <div class="cell columns column-output-location" data-layout-align="center">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># Ignore this line - just pulling out month </span></span>
-<span id="cb19-2"><a></a>biketown<span class="sc">$</span>month <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"^([0-9]{1,2})/.*"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">1"</span>,</span>
-<span id="cb19-3"><a></a>                       biketown<span class="sc">$</span>StartDate)</span>
-<span id="cb19-4"><a></a></span>
-<span id="cb19-5"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> biketown, </span>
-<span id="cb19-6"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> month)) <span class="sc">+</span></span>
-<span id="cb19-7"><a></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> biketown, </span>
+<span id="cb19-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> month)) <span class="sc">+</span></span>
+<span id="cb19-3"><a></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -592,7 +595,7 @@ $ MultipleRental   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, F
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -614,7 +617,7 @@ $ MultipleRental   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, F
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -733,7 +736,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-17-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -752,7 +755,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-17-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-18-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -778,7 +781,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-18-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -801,7 +804,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-20-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -819,7 +822,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-20-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-21-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -838,7 +841,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-21-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -852,7 +855,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-23-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -862,7 +865,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-23-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-24-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -875,6 +878,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 </section>
 <section id="a-speedy-peek-at-advanced-techniques" class="slide level2">
 <h2>A speedy peek at advanced techniques!</h2>
+<p>If we run out of time, we’ll pick this back up during lab next Thursday.</p>
 </section>
 <section id="faceting" class="slide level2">
 <h2>Faceting</h2>
@@ -891,7 +895,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-24-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-25-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -951,7 +955,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-25-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-26-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -996,7 +1000,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-26-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-27-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1017,7 +1021,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-27-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-28-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1269,7 +1273,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-29-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-30-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1295,7 +1299,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-30-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture03_wk01fri_files/figure-revealjs/unnamed-chunk-31-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
