@@ -59,6 +59,17 @@ library(tidyverse)
 -   Course assistant office hours are now on Moodle
 -   [The DataLab @ Reed](https://www.reed.edu/data-at-reed/data_lab/)
 
+```{r, echo = FALSE, eval = FALSE}
+
+library(tidyverse)
+qod <- read.csv("data/qod_coffee-tea.csv")
+qod %>% count(clean.answer) %>%
+  ggplot(aes(y = reorder(clean.answer, n), x = n)) +
+  geom_col() +
+  ylab("") +
+  theme_classic()
+
+```
 
 ------------------------------------------------------------------------
 

@@ -24,7 +24,7 @@ RStudio comes in two varieties: RStudio Desktop and RStudio Server. The desktop 
 
 In order to access the lab each week, you'll have to follow these steps. Here, we detail the process of logging in to the RStudio Server and uploading a `.zip` file with the lab materials.
 
-1. Find today's date on the course website home page calendar. Click "DOWNLOAD LAB." This will download a `.zip` file to your computer.
+1. Find today's date on the course website home page schedule. Click "DOWNLOAD LAB." This will download a `.zip` file to your computer.
 2. Use your web browser to navigate to the Reed RStudio server at [https://rstudio.reed.edu](https://rstudio.reed.edu).
 3. Log-in using your Reed username and password (the one you use for Moodle, Gmail, etc.).
 4. Click on the "Upload" button in the lower right quadrant in the RStudio screen.
@@ -41,8 +41,5 @@ In order to access the lab each week, you'll have to follow these steps. Here, w
 
 ![Rename the lab `.qmd` file using your name.](img/lab1_instr_rename.png)
 
-9. Finally, being sure to go back to the `lab01` folder if you moved around at all, click on the gear symbol next to "More". This is again in the lower right quadrant of Rstudio. Then, click "Set As Working Directory." This tells R where to find files and data relative to your `.qmd` file. If you ever encounter an error where RStudio is complaining that it can't find something, a good first check is to make sure you've done this step.  
-
-![Set the working directory to be `lab01`.](img/lab1_instr_setwd.png)
 
 
