@@ -125,7 +125,7 @@ library(tidyverse)
 ## Import the Data
 
 ```{r}
-biketown <- read_csv("data/biketown.csv")
+biketown <- read.csv("data/biketown.csv")
 
 # Inspect the data
 glimpse(biketown)
@@ -264,7 +264,7 @@ ggplot(data = biketown,
 ```
 
 -   **mapping** to a variable goes in `aes()`
--   **setting** to a specific value goes in the `geom_---()`
+-   **setting** to a specific, *constant*, value goes in the `geom_---()`
 <br><br>
 -   Does the right **tail** of this distribution make sense? 
 
@@ -463,6 +463,11 @@ ggplot(data = near_Reed,
 ```
 :::
 
+::: fragment
+Is there something visually off with the points in this graph?
+:::
+
+
 ------------------------------------------------------------------------
 
 ## Scatterplots
@@ -627,7 +632,6 @@ ggplot(data = near_Reed,
 ## Fussing with Labels: Rotate
 
 ```{r bar4}
-#| output-location: column
 
 biketown$month <- ifelse(biketown$month == 7, "July",
                          ifelse(biketown$month == 8, "August", "September"))
@@ -646,8 +650,7 @@ ggplot(data = biketown,
 ## Zooming In
 
 ```{r}
-#| output-location: column
-#| 
+
 ggplot(data = biketown, 
        mapping = aes(x = PaymentPlan, 
                      y = Distance_Miles,
@@ -661,8 +664,6 @@ ggplot(data = biketown,
 ## Zooming In
 
 ```{r box5}
-#| output-location: column
-
 ggplot(data = biketown, 
        mapping = aes(x = PaymentPlan, 
                      y = Distance_Miles,
@@ -713,6 +714,12 @@ ggplot(data = near_Reed,
 colors()
 ```
 
+<br>
+
+::: fragment
+You can also use hex color codes to fully customize colors.
+::: 
+
 ------------------------------------------------------------------------
 
 ## Change the Color
@@ -729,7 +736,7 @@ ggplot(data = near_Reed,
                                 "steelblue4",
                                 "forestgreen",
                                 "goldenrod",
-                                "maroon"))
+                                "#aa0951"))
 ```
 
 ------------------------------------------------------------------------

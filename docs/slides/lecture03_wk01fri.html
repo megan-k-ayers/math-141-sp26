@@ -263,27 +263,27 @@
 <section id="import-the-data" class="slide level2">
 <h2>Import the Data</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>biketown <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/biketown.csv"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>biketown <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/biketown.csv"</span>)</span>
 <span id="cb2-2"><a></a></span>
 <span id="cb2-3"><a></a><span class="co"># Inspect the data</span></span>
 <span id="cb2-4"><a></a><span class="fu">glimpse</span>(biketown)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 9,999
 Columns: 19
-$ RouteID          &lt;dbl&gt; 4074085, 3719219, 3789757, 3576798, 3459987, 3947695,…
+$ RouteID          &lt;int&gt; 4074085, 3719219, 3789757, 3576798, 3459987, 3947695,…
 $ PaymentPlan      &lt;chr&gt; "Subscriber", "Casual", "Casual", "Subscriber", "Casu…
 $ StartHub         &lt;chr&gt; "SE Elliott at Division", "SW Yamhill at Director Par…
 $ StartLatitude    &lt;dbl&gt; 45.50513, 45.51898, 45.52990, 45.52389, 45.53028, 45.…
 $ StartLongitude   &lt;dbl&gt; -122.6534, -122.6813, -122.6628, -122.6722, -122.6547…
 $ StartDate        &lt;chr&gt; "8/17/2017", "7/22/2017", "7/27/2017", "7/12/2017", "…
-$ StartTime        &lt;time&gt; 10:44:00, 14:49:00, 14:13:00, 13:23:00, 19:30:00, 10…
+$ StartTime        &lt;chr&gt; "10:44:00", "14:49:00", "14:13:00", "13:23:00", "19:3…
 $ EndHub           &lt;chr&gt; "Blues Fest - SW Waterfront at Clay - Disabled", "SW …
 $ EndLatitude      &lt;dbl&gt; 45.51287, 45.52142, 45.55902, 45.53409, 45.52990, 45.…
 $ EndLongitude     &lt;dbl&gt; -122.6749, -122.6726, -122.6355, -122.6949, -122.6628…
 $ EndDate          &lt;chr&gt; "8/17/2017", "7/22/2017", "7/27/2017", "7/12/2017", "…
-$ EndTime          &lt;time&gt; 10:56:00, 15:00:00, 14:42:00, 13:38:00, 20:30:00, 10…
+$ EndTime          &lt;chr&gt; "10:56:00", "15:00:00", "14:42:00", "13:38:00", "20:3…
 $ TripType         &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
-$ BikeID           &lt;dbl&gt; 6163, 6843, 6409, 7375, 6354, 6088, 6089, 5988, 6857,…
+$ BikeID           &lt;int&gt; 6163, 6843, 6409, 7375, 6354, 6088, 6089, 5988, 6857,…
 $ BikeName         &lt;chr&gt; "0488 BIKETOWN", "0759 BIKETOWN", "0614 BIKETOWN", "0…
 $ Distance_Miles   &lt;dbl&gt; 1.91, 0.72, 3.42, 1.81, 4.51, 5.54, 1.59, 1.03, 0.70,…
 $ Duration         &lt;dbl&gt; 11.500, 11.383, 28.317, 14.917, 60.517, 53.783, 23.86…
@@ -298,19 +298,34 @@ $ MultipleRental   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, F
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Look at first few rows</span></span>
 <span id="cb4-2"><a></a><span class="fu">head</span>(biketown)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 19
-  RouteID PaymentPlan StartHub  StartLatitude StartLongitude StartDate StartTime
-    &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;             &lt;dbl&gt;          &lt;dbl&gt; &lt;chr&gt;     &lt;time&gt;   
-1 4074085 Subscriber  SE Ellio…          45.5          -123. 8/17/2017 10:44    
-2 3719219 Casual      SW Yamhi…          45.5          -123. 7/22/2017 14:49    
-3 3789757 Casual      NE Holla…          45.5          -123. 7/27/2017 14:13    
-4 3576798 Subscriber  NW Couch…          45.5          -123. 7/12/2017 13:23    
-5 3459987 Casual      NE 11th …          45.5          -123. 7/3/2017  19:30    
-6 3947695 Casual      SW Moody…          45.5          -123. 8/8/2017  10:01    
-# ℹ 12 more variables: EndHub &lt;chr&gt;, EndLatitude &lt;dbl&gt;, EndLongitude &lt;dbl&gt;,
-#   EndDate &lt;chr&gt;, EndTime &lt;time&gt;, TripType &lt;lgl&gt;, BikeID &lt;dbl&gt;,
-#   BikeName &lt;chr&gt;, Distance_Miles &lt;dbl&gt;, Duration &lt;dbl&gt;,
-#   RentalAccessPath &lt;chr&gt;, MultipleRental &lt;lgl&gt;</code></pre>
+<pre><code>  RouteID PaymentPlan                    StartHub StartLatitude StartLongitude
+1 4074085  Subscriber      SE Elliott at Division      45.50513      -122.6534
+2 3719219      Casual SW Yamhill at Director Park      45.51898      -122.6813
+3 3789757      Casual          NE Holladay at MLK      45.52990      -122.6628
+4 3576798  Subscriber             NW Couch at 2nd      45.52389      -122.6722
+5 3459987      Casual    NE 11th at Holladay Park      45.53028      -122.6547
+6 3947695      Casual          SW Moody at Thomas      45.49429      -122.6719
+  StartDate StartTime                                        EndHub EndLatitude
+1 8/17/2017  10:44:00 Blues Fest - SW Waterfront at Clay - Disabled    45.51287
+2 7/22/2017  14:49:00                                SW 2nd at Pine    45.52142
+3 7/27/2017  14:13:00 NE Alberta at NE 29th/30th - Community Corral    45.55902
+4 7/12/2017  13:23:00                            NW Raleigh at 21st    45.53409
+5  7/3/2017  19:30:00                            NE Holladay at MLK    45.52990
+6  8/8/2017  10:01:00                              SW 3rd at Ankeny    45.52248
+  EndLongitude   EndDate  EndTime TripType BikeID                BikeName
+1    -122.6749 8/17/2017 10:56:00       NA   6163           0488 BIKETOWN
+2    -122.6726 7/22/2017 15:00:00       NA   6843           0759 BIKETOWN
+3    -122.6355 7/27/2017 14:42:00       NA   6409           0614 BIKETOWN
+4    -122.6949 7/12/2017 13:38:00       NA   7375 0959 BETRUE MAX - RECON
+5    -122.6628  7/3/2017 20:30:00       NA   6354           0374 BIKETOWN
+6    -122.6733  8/8/2017 10:55:00       NA   6088           0048 BIKETOWN
+  Distance_Miles Duration RentalAccessPath MultipleRental
+1           1.91   11.500           keypad          FALSE
+2           0.72   11.383           keypad          FALSE
+3           3.42   28.317           keypad          FALSE
+4           1.81   14.917           keypad          FALSE
+5           4.51   60.517           keypad           TRUE
+6           5.54   53.783           keypad          FALSE</code></pre>
 </div>
 </div>
 <p>What does a row represent here?</p>
@@ -330,7 +345,7 @@ $ MultipleRental   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, F
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">class</span>(biketown)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame" </code></pre>
+<pre><code>[1] "data.frame"</code></pre>
 </div>
 </div>
 </section>
@@ -444,7 +459,7 @@ $ MultipleRental   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, F
 </div></div>
 <ul>
 <li class="fragment"><strong>mapping</strong> to a variable goes in <code>aes()</code></li>
-<li class="fragment"><strong>setting</strong> to a specific value goes in the <code>geom_---()</code> <br><br></li>
+<li class="fragment"><strong>setting</strong> to a specific, <em>constant</em>, value goes in the <code>geom_---()</code> <br><br></li>
 <li class="fragment">Does the right <strong>tail</strong> of this distribution make sense?</li>
 </ul>
 </section>
@@ -743,6 +758,9 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 </div>
 </div></div>
 </div>
+<div class="fragment">
+<p>Is there something visually off with the points in this graph?</p>
+</div>
 </section>
 <section id="scatterplots-1" class="slide level2">
 <h2>Scatterplots</h2>
@@ -921,8 +939,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 </section>
 <section id="fussing-with-labels-rotate" class="slide level2">
 <h2>Fussing with Labels: Rotate</h2>
-<div class="cell columns column-output-location" data-layout-align="center">
-<div class="column">
+<div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>biketown<span class="sc">$</span>month <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(biketown<span class="sc">$</span>month <span class="sc">==</span> <span class="dv">7</span>, <span class="st">"July"</span>,</span>
 <span id="cb34-2"><a></a>                         <span class="fu">ifelse</span>(biketown<span class="sc">$</span>month <span class="sc">==</span> <span class="dv">8</span>, <span class="st">"August"</span>, <span class="st">"September"</span>))</span>
 <span id="cb34-3"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> biketown, </span>
@@ -932,7 +949,6 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <span id="cb34-7"><a></a>          <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
 <span id="cb34-8"><a></a>                       <span class="at">vjust =</span> <span class="dv">1</span>,</span>
 <span id="cb34-9"><a></a>                       <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -940,19 +956,17 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 </figure>
 </div>
 </div>
-</div></div>
+</div>
 </section>
 <section id="zooming-in" class="slide level2">
 <h2>Zooming In</h2>
-<div class="cell columns column-output-location" data-layout-align="center">
-<div class="column">
+<div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> biketown, </span>
 <span id="cb35-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> PaymentPlan, </span>
 <span id="cb35-3"><a></a>                     <span class="at">y =</span> Distance_Miles,</span>
 <span id="cb35-4"><a></a>                     <span class="at">fill =</span> PaymentPlan)) <span class="sc">+</span></span>
 <span id="cb35-5"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
 <span id="cb35-6"><a></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -960,12 +974,11 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 </figure>
 </div>
 </div>
-</div></div>
+</div>
 </section>
 <section id="zooming-in-1" class="slide level2">
 <h2>Zooming In</h2>
-<div class="cell columns column-output-location" data-layout-align="center">
-<div class="column">
+<div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> biketown, </span>
 <span id="cb36-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> PaymentPlan, </span>
 <span id="cb36-3"><a></a>                     <span class="at">y =</span> Distance_Miles,</span>
@@ -973,7 +986,6 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <span id="cb36-5"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
 <span id="cb36-6"><a></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
 <span id="cb36-7"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -981,7 +993,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 </figure>
 </div>
 </div>
-</div></div>
+</div>
 </section>
 <section id="multiple-geoms" class="slide level2">
 <h2>Multiple <code>geom</code>s</h2>
@@ -1254,6 +1266,10 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 [655] "yellow3"              "yellow4"              "yellowgreen"         </code></pre>
 </div>
 </div>
+<p><br></p>
+<div class="fragment">
+<p>You can also use hex color codes to fully customize colors.</p>
+</div>
 </section>
 <section id="change-the-color-1" class="slide level2">
 <h2>Change the Color</h2>
@@ -1269,7 +1285,7 @@ $ Species_Factoid            &lt;chr&gt; "Acorns take two years to mature and ar
 <span id="cb41-8"><a></a>                                <span class="st">"steelblue4"</span>,</span>
 <span id="cb41-9"><a></a>                                <span class="st">"forestgreen"</span>,</span>
 <span id="cb41-10"><a></a>                                <span class="st">"goldenrod"</span>,</span>
-<span id="cb41-11"><a></a>                                <span class="st">"maroon"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb41-11"><a></a>                                <span class="st">"#aa0951"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">

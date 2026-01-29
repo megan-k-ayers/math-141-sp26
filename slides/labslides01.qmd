@@ -67,7 +67,7 @@ library(tidyverse)
 ::: nonincremental
 -   Name
 -   Pronouns
--   Album recommendation
+-   Something you're excited for this semester (Reed-related or not)
 :::
 
 ------------------------------------------------------------------------
@@ -84,12 +84,20 @@ library(tidyverse)
 
 ## Open working time
 
-::: nonincremental
+::: {.nonincremental .fragment}
 -   The lab will be due on Gradescope (as a **PDF**) on Tuesday February 3 at 11:59pm.
-- **Important!** Check out out your Gradescope account for this class before Tuesday afternoon. **Now would be a great time!**
-     - You will need the course entry code, which is on the course website and Moodle.
-     - If you have any issues, send me an email **before Tuesday afternoon** and we'll figure it out.
-     - If you have to turn your lab in late, you will need to use at least one of your extension days
+-   Check out out your Gradescope account for this class **before Tuesday afternoon**.
+     - Course entry code: on the course website and Moodle.
+     - If you have any issues, send me an email **before Tuesday afternoon**.
+
 :::
 
+<br>
 
+::: {.nonincremental .fragment}
+**To-do:**
+
+1. Follow the lab instructions to access lab materials / RStudio Server.
+2. Review `intro.qmd`, if you'd like.
+3. Start the lab exercises in `lab01_yournamehere.qmd`.
+:::
