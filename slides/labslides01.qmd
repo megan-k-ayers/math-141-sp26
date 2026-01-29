@@ -52,6 +52,11 @@ library(tidyverse)
 
 ------------------------------------------------------------------------
 
+## Announcements/reminders
+-   Course assistant office hours are posted on Moodle
+
+------------------------------------------------------------------------
+
 ## Goals for Today
 
 ::: nonincremental
