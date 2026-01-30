@@ -1,5 +1,5 @@
 scheduled-docs:
-  draft-after: 1/30/26
+  draft-after: 2/6/26
   timezone: "-08:00"
   autonav:
     hybrid:
@@ -60,34 +60,34 @@ scheduled-docs:
           docs:
             - type: Reading
               href: readings/reading05_wk02mon.qmd
-            - type: Slides
-              href: slides/lecture04_wk02mon.qmd
+            # - type: Slides
+            #   href: slides/lecture04_wk02mon.qmd
         - topic: "Data Wrangling"
           display-date: Wednesday, Feb 4
           date: 2/4/26
           docs:
             - type: Reading
               href: readings/reading06_wk02wed.qmd
-            - type: Slides
-              href: slides/lecture05_wk02wed.qmd
+            # - type: Slides
+            #   href: slides/lecture05_wk02wed.qmd
         - topic: "Lab: Data Visualization"
           display-date: Thursday, Feb 5
           date: 2/5/26
           docs:
             - type: Reading
               href: readings/reading07_wk02thu.qmd
-            - type: Download Lab
-              href: labs/lab02.zip
+            # - type: Download Lab
+            #   href: labs/lab02.zip
         - topic: "Probability I: Introduction and LLN"
           display-date: Friday, Feb 6
           date: 2/6/26
           docs:
               - type: Reading
                 href: readings/reading08_wk02fri.qmd
-              - type: Slides
-                href: slides/lecture06_wk02fri.qmd
-              - type: Download HW
-                href: hw/hw02.zip
+              # - type: Slides
+              #   href: slides/lecture06_wk02fri.qmd
+              # - type: Download HW
+              #   href: hw/hw02.zip
       # resources:
       #   - 'Some text'
 
