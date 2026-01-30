@@ -215,11 +215,16 @@
 <ul>
 <li>The teaching team would love to see you in office hours!
 <ul>
-<li><strong>Instructor office hours</strong>: For individual or small group help on problems or concepts</li>
+<li><strong>Megan’s office hours</strong>: For individual or small group help on problems or concepts</li>
 <li><strong>Course assistant office hours</strong>: To work on assignments with your peers and get help from the course assistants when you are stuck</li>
 </ul></li>
-<li>Reminder: If you haven’t already, make sure your access to Gradescope is set up.</li>
 </ul>
+<div class="fragment">
+<ul>
+<li class="fragment">Reminder: If you haven’t already, make sure your access to Gradescope is set up.</li>
+<li class="fragment">Please select pages for each problem part on Gradescope</li>
+</ul>
+</div>
 </section>
 <section class="slide level2">
 
@@ -430,6 +435,8 @@
 <p><span class="math display">\[
 \bar{x}  = \frac{1}{n} \sum_{i = 1}^n x_i
 \]</span></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Test out on first 6 values</span></span>
 <span id="cb3-2"><a></a><span class="fu">head</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -437,12 +444,24 @@
 <pre><code>[1] 1.91 0.72 3.42 1.81 4.51 5.54</code></pre>
 </div>
 </div>
-</div><div class="column fragment" style="width:50%;">
-<p>Compute in R:</p>
+</div>
+<p><br></p>
+<div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">mean</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>(<span class="fl">1.91</span> <span class="sc">+</span> <span class="fl">0.72</span> <span class="sc">+</span> <span class="fl">3.42</span> <span class="sc">+</span> <span class="fl">1.81</span> <span class="sc">+</span> <span class="fl">4.51</span> <span class="sc">+</span> <span class="fl">5.54</span>) <span class="sc">/</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.985</code></pre>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Compute in R for all values</span></span>
+<span id="cb7-2"><a></a><span class="fu">mean</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.044768</code></pre>
+</div>
 </div>
 </div>
 </div></div>
@@ -472,16 +491,34 @@
 <li>If <span class="math inline">\(n\)</span> is even, then it is the average of the middle two values</li>
 </ul>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Test out on first 6 values</span></span>
-<span id="cb7-2"><a></a><span class="fu">head</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Test out on first 6 values</span></span>
+<span id="cb9-2"><a></a><span class="fu">head</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.91 0.72 3.42 1.81 4.51 5.54</code></pre>
+</div>
+</div>
+<p><br></p>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">sort</span>(<span class="fu">head</span>(biketown<span class="sc">$</span>Distance_Miles))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.72 1.81 1.91 3.42 4.51 5.54</code></pre>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>(<span class="fl">3.42</span> <span class="sc">+</span> <span class="fl">1.91</span>) <span class="sc">/</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.665</code></pre>
+</div>
 </div>
 </div>
 </div><div class="column fragment" style="width:50%;">
 <p>Compute in R:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">median</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">median</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.48</code></pre>
 </div>
@@ -494,8 +531,8 @@
 <div class="column" style="width:50%;">
 <p>Why is the mean larger than the median?</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">data.frame</span>(<span class="at">mean_miles =</span> <span class="fu">mean</span>(biketown<span class="sc">$</span>Distance_Miles),</span>
-<span id="cb11-2"><a></a>           <span class="at">median_miles =</span> <span class="fu">median</span>(biketown<span class="sc">$</span>Distance_Miles))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">data.frame</span>(<span class="at">mean_miles =</span> <span class="fu">mean</span>(biketown<span class="sc">$</span>Distance_Miles),</span>
+<span id="cb17-2"><a></a>           <span class="at">median_miles =</span> <span class="fu">median</span>(biketown<span class="sc">$</span>Distance_Miles))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  mean_miles median_miles
 1   2.044768         1.48</code></pre>
@@ -506,14 +543,64 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div></div>
 <div class="fragment">
-<p>We say that asymmetric distributions are <strong>skewed</strong>. This is “positive skewed” or “right skewed.”</p>
+<p>Answer: the distribution is <strong>skewed</strong>. In skewed distributions, the mean is pulled farther in the direction of skew than the median.</p>
+</div>
+</section>
+<section id="measures-of-center-6" class="slide level2">
+<h2>Measures of Center</h2>
+<p><strong>Note</strong>: The mean is very sensitive to outliers, while the median is not.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>my_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb19-2"><a></a>my_data_with_outlier <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">100</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><br><br></p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">mean</span>(my_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5.5</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">mean</span>(my_data_with_outlier)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20.5</code></pre>
+</div>
+</div>
+</div></div>
+</div>
+<p><br><br></p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">median</span>(my_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">median</span>(my_data_with_outlier)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6</code></pre>
+</div>
+</div>
+</div></div>
+</div>
+<p><br></p>
+<div class="fragment">
+<p>We call the median a <strong>robust</strong> statistic.</p>
 </div>
 </section>
 <section id="computing-measures-of-center-by-groups" class="slide level2">
@@ -523,7 +610,7 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -533,29 +620,37 @@
 <h2>Computing Measures of Center by Groups</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Handy R function: <code>aggregate()</code></p>
+<p>Handy <code>dplyr</code> functions that we’ll learn: <code>group_by()</code> and <code>summarize()</code>.</p>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># Calculate group *MEANS*</span></span>
-<span id="cb13-2"><a></a><span class="fu">aggregate</span>(Distance_Miles <span class="sc">~</span> PaymentPlan, biketown,</span>
-<span id="cb13-3"><a></a>          mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb28-2"><a></a></span>
+<span id="cb28-3"><a></a><span class="co"># Calculate group *MEANS*</span></span>
+<span id="cb28-4"><a></a>biketown <span class="sc">%&gt;%</span></span>
+<span id="cb28-5"><a></a>  <span class="fu">group_by</span>(PaymentPlan) <span class="sc">%&gt;%</span></span>
+<span id="cb28-6"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_dist =</span> <span class="fu">mean</span>(Distance_Miles))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  PaymentPlan Distance_Miles
-1      Casual       2.562520
-2  Subscriber       1.447029</code></pre>
+<pre><code># A tibble: 2 × 2
+  PaymentPlan mean_dist
+  &lt;chr&gt;           &lt;dbl&gt;
+1 Casual           2.56
+2 Subscriber       1.45</code></pre>
 </div>
 </div>
 </div>
 <p><br></p>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># Calculate group *MEDIANS*</span></span>
-<span id="cb15-2"><a></a><span class="fu">aggregate</span>(Distance_Miles <span class="sc">~</span> PaymentPlan, biketown,</span>
-<span id="cb15-3"><a></a>          median)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="co"># Calculate group *MEDIANS*</span></span>
+<span id="cb30-2"><a></a>biketown <span class="sc">%&gt;%</span></span>
+<span id="cb30-3"><a></a>  <span class="fu">group_by</span>(PaymentPlan) <span class="sc">%&gt;%</span></span>
+<span id="cb30-4"><a></a>  <span class="fu">summarize</span>(<span class="at">median_dist =</span> <span class="fu">median</span>(Distance_Miles))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  PaymentPlan Distance_Miles
-1      Casual           2.03
-2  Subscriber           1.02</code></pre>
+<pre><code># A tibble: 2 × 2
+  PaymentPlan median_dist
+  &lt;chr&gt;             &lt;dbl&gt;
+1 Casual             2.03
+2 Subscriber         1.02</code></pre>
 </div>
 </div>
 </div>
@@ -564,7 +659,7 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -595,7 +690,7 @@
 <div class="column" style="width:50%;">
 <ul>
 <li>Find how much each observation deviates from the mean.</li>
-<li>Compute the average of the deviations.</li>
+<li>Idea: Compute the average of the deviations</li>
 </ul>
 <p><span class="math display">\[
 \frac{1}{n} \sum_{i = 1}^n (x_i - \bar{x})
@@ -613,15 +708,15 @@
 <div class="column" style="width:50%;">
 <ul>
 <li>Find how much each observation deviates from the mean.</li>
-<li>Compute the average of the deviations.</li>
+<li>Idea: Compute the average of the deviations</li>
 </ul>
 <p><span class="math display">\[
 \frac{1}{n} \sum_{i = 1}^n (x_i - \bar{x})
 \]</span></p>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># Test out on first 6 values</span></span>
-<span id="cb17-2"><a></a><span class="fu">head</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="co"># Test out on first 6 values</span></span>
+<span id="cb32-2"><a></a><span class="fu">head</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.91 0.72 3.42 1.81 4.51 5.54</code></pre>
 </div>
@@ -630,6 +725,30 @@
 <div class="fragment">
 <p><strong>Problem?</strong></p>
 </div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="co"># Calculate mean by hand</span></span>
+<span id="cb34-2"><a></a>(<span class="fl">1.91</span> <span class="sc">+</span> <span class="fl">0.72</span> <span class="sc">+</span> <span class="fl">3.42</span> <span class="sc">+</span> <span class="fl">1.81</span> <span class="sc">+</span> <span class="fl">4.51</span> <span class="sc">+</span> <span class="fl">5.54</span>) <span class="sc">/</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.985</code></pre>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="co"># Calculate average deviations by hand</span></span>
+<span id="cb36-2"><a></a>((<span class="fl">1.91</span> <span class="sc">-</span> <span class="fl">2.985</span>) <span class="sc">+</span> (<span class="fl">0.72</span> <span class="sc">-</span> <span class="fl">2.985</span>) <span class="sc">+</span> </span>
+<span id="cb36-3"><a></a>  (<span class="fl">3.42</span> <span class="sc">-</span> <span class="fl">2.985</span>) <span class="sc">+</span> (<span class="fl">1.81</span> <span class="sc">-</span> <span class="fl">2.985</span>) <span class="sc">+</span></span>
+<span id="cb36-4"><a></a>  (<span class="fl">4.51</span> <span class="sc">-</span> <span class="fl">2.985</span>) <span class="sc">+</span> (<span class="fl">5.54</span> <span class="sc">-</span> <span class="fl">2.985</span>)) <span class="sc">/</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
+</div>
+</div></div>
 </section>
 <section id="measures-of-variability-3" class="slide level2">
 <h2>Measures of Variability</h2>
@@ -661,10 +780,35 @@
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="co"># Test out on first 6 values</span></span>
-<span id="cb19-2"><a></a><span class="fu">head</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="co"># Test out on first 6 values</span></span>
+<span id="cb38-2"><a></a><span class="fu">head</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.91 0.72 3.42 1.81 4.51 5.54</code></pre>
+</div>
+</div>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="co"># Calculate mean by hand</span></span>
+<span id="cb40-2"><a></a>(<span class="fl">1.91</span> <span class="sc">+</span> <span class="fl">0.72</span> <span class="sc">+</span> <span class="fl">3.42</span> <span class="sc">+</span> <span class="fl">1.81</span> <span class="sc">+</span> <span class="fl">4.51</span> <span class="sc">+</span> <span class="fl">5.54</span>) <span class="sc">/</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.985</code></pre>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="co"># Calculate average deviations by hand</span></span>
+<span id="cb42-2"><a></a>((<span class="fl">1.91</span> <span class="sc">-</span> <span class="fl">2.985</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (<span class="fl">0.72</span> <span class="sc">-</span> <span class="fl">2.985</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> </span>
+<span id="cb42-3"><a></a>  (<span class="fl">3.42</span> <span class="sc">-</span> <span class="fl">2.985</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (<span class="fl">1.81</span> <span class="sc">-</span> <span class="fl">2.985</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span></span>
+<span id="cb42-4"><a></a>  (<span class="fl">4.51</span> <span class="sc">-</span> <span class="fl">2.985</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> (<span class="fl">5.54</span> <span class="sc">-</span> <span class="fl">2.985</span>)<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> <span class="dv">6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.784892</code></pre>
+</div>
 </div>
 </div>
 </div></div>
@@ -725,7 +869,7 @@ s^2 = \frac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2
 </div><div class="column" style="width:50%;">
 <p>Compute with R:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">var</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">var</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.805638</code></pre>
 </div>
@@ -739,140 +883,151 @@ s^2 = \frac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Find how much each observation deviates from the mean.</li>
-<li class="fragment">Compute the (nearly) average of the <strong>squared</strong> deviations.</li>
-<li class="fragment">Called <strong>sample variance</strong> <span class="math inline">\(s^2\)</span>.</li>
-<li class="fragment">The square root of the sample variance is called the <strong>sample standard deviation</strong> <span class="math inline">\(s\)</span>.</li>
-</ul>
-</div><div class="column" style="width:50%;">
-
-</div></div>
-</section>
-<section id="measures-of-variability-9" class="slide level2">
-<h2>Measures of Variability</h2>
-<ul>
-<li>Want a statistic that captures how much observations <strong>deviate</strong> from the mean</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="fragment">
 <ul>
 <li>Find how much each observation deviates from the mean.</li>
-<li>Compute the (nearly) average of the <strong>squared</strong> deviations.</li>
-<li>Called <strong>sample variance</strong> <span class="math inline">\(s^2\)</span>.</li>
+<li>Compute the (nearly) average of the <strong>squared</strong> deviations (<span class="math inline">\(s^2\)</span>).</li>
+<li>Because observations are squared, units differ from original data.</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
 <li>The square root of the sample variance is called the <strong>sample standard deviation</strong> <span class="math inline">\(s\)</span>.</li>
 </ul>
-<p><span class="math display">\[
-s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
-\]</span></p>
+<p><img data-src="img/sample_var_latex.png" style="width:65.0%"></p>
+</div>
 </div><div class="column" style="width:50%;">
-
-</div></div>
-</section>
-<section id="measures-of-variability-10" class="slide level2">
-<h2>Measures of Variability</h2>
-<ul>
-<li>Want a statistic that captures how much observations <strong>deviate</strong> from the mean</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Find how much each observation deviates from the mean.</li>
-<li>Compute the (nearly) average of the <strong>squared</strong> deviations.</li>
-<li>Called <strong>sample variance</strong> <span class="math inline">\(s^2\)</span>.</li>
-<li>The square root of the sample variance is called the <strong>sample standard deviation</strong> <span class="math inline">\(s\)</span>.</li>
-</ul>
-<p><span class="math display">\[
-s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
-\]</span></p>
-</div><div class="column" style="width:50%;">
+<div class="fragment">
 <p>Compute in R:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">var</span>(biketown<span class="sc">$</span>Distance_Miles)  <span class="co"># Variance</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">var</span>(biketown<span class="sc">$</span>Distance_Miles)  <span class="co"># Variance</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.805638</code></pre>
 </div>
 </div>
 <p><br></p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">sd</span>(biketown<span class="sc">$</span>Distance_Miles)   <span class="co"># Standard deviation </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">sd</span>(biketown<span class="sc">$</span>Distance_Miles)   <span class="co"># Standard deviation </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.950804</code></pre>
+</div>
 </div>
 </div>
 <p><br></p>
+<div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">sqrt</span>(<span class="fu">var</span>(biketown<span class="sc">$</span>Distance_Miles))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">sqrt</span>(<span class="fu">var</span>(biketown<span class="sc">$</span>Distance_Miles))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.950804</code></pre>
 </div>
 </div>
+</div>
 </div></div>
 </section>
-<section id="measures-of-variability-11" class="slide level2">
-<h2>Measures of Variability</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<section id="visualizing-standard-deviation" class="slide level2">
+<h2>Visualizing Standard Deviation</h2>
 <ul>
-<li class="fragment">In addition to the sample standard deviation and the sample variance, there is the sample <strong>interquartile range</strong> (IQR):</li>
+<li class="fragment">The standard deviation measures the <strong>typical size of deviations from the mean.</strong></li>
+<li class="fragment">For most data sets, the large majority of observations are within 2 standard deviations of the mean.</li>
 </ul>
-</div><div class="column" style="width:50%;">
-
-</div></div>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">sd</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.950804</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-34-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="measures-of-variability-12" class="slide level2">
+<section id="measures-of-variability-9" class="slide level2">
 <h2>Measures of Variability</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>In addition to the sample standard deviation and the sample variance, there is the sample <strong>interquartile range</strong> (IQR):</li>
-</ul>
-<p><span class="math display">\[
-\mbox{IQR} = \mbox{Q}_3 - \mbox{Q}_1
-\]</span></p>
-</div><div class="column" style="width:50%;">
-
-</div></div>
-</section>
-<section id="measures-of-variability-13" class="slide level2">
-<h2>Measures of Variability</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
 <ul>
 <li>In addition to the sample standard deviation and the sample variance, there is the sample <strong>interquartile range</strong> (IQR):</li>
 </ul>
 <p><span class="math display">\[
 \mbox{IQR} = \mbox{Q}_3 - \mbox{Q}_1
 \]</span></p>
-</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">25% of all observations are less than the <em>first quartile</em> Q1</li>
+<li class="fragment">25% of all observations are greater than the <em>third quartile</em> Q3</li>
+</ul>
+<div class="fragment">
 <p>Compute with R:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">IQR</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">IQR</span>(biketown<span class="sc">$</span>Distance_Miles)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.89</code></pre>
 </div>
 </div>
-</div></div>
+</div>
+</section>
+<section id="visualizing-the-iqr" class="slide level2">
+<h2>Visualizing the IQR</h2>
+<ul>
+<li>In addition to the sample standard deviation and the sample variance, there is the sample <strong>interquartile range</strong> (IQR):</li>
+</ul>
+<p><span class="math display">\[
+\mbox{IQR} = \mbox{Q}_3 - \mbox{Q}_1
+\]</span></p>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">quantile</span>(biketown<span class="sc">$</span>Distance_Miles, <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> 25%  50%  75% 
+0.79 1.48 2.68 </code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-37-1.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="comparing-measures-of-variability" class="slide level2">
 <h2>Comparing Measures of Variability</h2>
 <ul>
-<li><p>Which is more robust to outliers, the IQR or <span class="math inline">\(s\)</span>?</p></li>
-<li><p>Which is more commonly used, the IQR or <span class="math inline">\(s\)</span>?</p></li>
+<li>Which is more robust to outliers, the IQR or <span class="math inline">\(s\)</span>?</li>
 </ul>
-<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>agg_sd <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(Distance_Miles <span class="sc">~</span> PaymentPlan, biketown, sd) </span>
-<span id="cb31-2"><a></a>agg_iqr <span class="ot">&lt;-</span> <span class="fu">aggregate</span>(Distance_Miles <span class="sc">~</span> PaymentPlan, biketown, IQR)</span>
-<span id="cb31-3"><a></a><span class="fu">data.frame</span>(<span class="at">PaymentPlan =</span> agg_sd<span class="sc">$</span>PaymentPlan,</span>
-<span id="cb31-4"><a></a>           <span class="at">sd_miles =</span> <span class="fu">round</span>(agg_sd<span class="sc">$</span>Distance_Miles, <span class="dv">3</span>),</span>
-<span id="cb31-5"><a></a>           <span class="at">iqr_miles =</span> <span class="fu">round</span>(agg_iqr<span class="sc">$</span>Distance_Miles, <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  PaymentPlan sd_miles iqr_miles
-1      Casual    2.153     2.248
-2  Subscriber    1.476     1.210</code></pre>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-38-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
 </div>
 </div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-39-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<p><br></p>
+<ul>
+<li class="fragment">Which is more commonly used, the IQR or <span class="math inline">\(s\)</span>?</li>
+</ul>
 </section>
 <section>
 <section id="summarizing-categorical-variables" class="title-slide slide level1 center">
@@ -882,8 +1037,8 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 <section id="new-data-set-cambridge-dogs" class="slide level2">
 <h2>New data set: Cambridge dogs</h2>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>dogs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://data.cambridgema.gov/api/views/sckh-3xyx/rows.csv"</span>)</span>
-<span id="cb33-2"><a></a><span class="fu">str</span>(dogs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a>dogs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://data.cambridgema.gov/api/views/sckh-3xyx/rows.csv"</span>)</span>
+<span id="cb58-2"><a></a><span class="fu">str</span>(dogs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>'data.frame':   1581 obs. of  6 variables:
  $ Dog_Name        : chr  "Thor" "Lucy" "Ruby" "Georgie" ...
@@ -899,38 +1054,41 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 <h2>Cambridge dogs data set</h2>
 <p>May want to focus on the dogs with the 5 most common names</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>dogs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://data.cambridgema.gov/api/views/sckh-3xyx/rows.csv"</span>)</span>
-<span id="cb35-2"><a></a></span>
-<span id="cb35-3"><a></a><span class="co"># Useful wrangling that we will come back to</span></span>
-<span id="cb35-4"><a></a>dogs<span class="sc">$</span>Breed <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(dogs<span class="sc">$</span>Dog_Breed <span class="sc">==</span> <span class="st">"Mixed Breed"</span>, <span class="st">"Mixed"</span>, <span class="st">"Single"</span>)</span>
-<span id="cb35-5"><a></a>dogs_top5 <span class="ot">&lt;-</span> dogs[dogs<span class="sc">$</span>Dog_Name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Luna"</span>, <span class="st">"Charlie"</span>, <span class="st">"Lucy"</span>,</span>
-<span id="cb35-6"><a></a>                                       <span class="st">"Cooper"</span>, <span class="st">"Rosie"</span>), ]</span>
-<span id="cb35-7"><a></a></span>
-<span id="cb35-8"><a></a><span class="fu">head</span>(dogs_top5)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>dogs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://data.cambridgema.gov/api/views/sckh-3xyx/rows.csv"</span>)</span>
+<span id="cb60-2"><a></a></span>
+<span id="cb60-3"><a></a><span class="co"># Useful wrangling that we will come back to</span></span>
+<span id="cb60-4"><a></a>dogs_top5 <span class="ot">&lt;-</span> dogs <span class="sc">%&gt;%</span></span>
+<span id="cb60-5"><a></a>  <span class="fu">mutate</span>(<span class="at">Breed =</span> <span class="fu">case_when</span>(Dog_Breed <span class="sc">==</span> <span class="st">"Mixed Breed"</span> <span class="sc">~</span> <span class="st">"Mixed"</span>,</span>
+<span id="cb60-6"><a></a>                           <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Single"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb60-7"><a></a>  <span class="fu">filter</span>(Dog_Name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Luna"</span>, <span class="st">"Charlie"</span>, <span class="st">"Lucy"</span>, <span class="st">"Cooper"</span>, <span class="st">"Rosie"</span>))</span>
+<span id="cb60-8"><a></a></span>
+<span id="cb60-9"><a></a></span>
+<span id="cb60-10"><a></a><span class="fu">head</span>(dogs_top5)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    Dog_Name                  Dog_Breed Location_masked Latitude_masked
-2       Lucy                     Poodle              NA         42.3696
-37      Luna                LABRADOODLE              NA         42.3860
-58   Charlie         Border Terrier Mix              NA         42.3596
-96    Cooper German Shorthaired Pointer              NA         42.3573
-171  Charlie           Golden Retriever              NA         42.3895
-224     Luna                Mixed Breed              NA         42.3913
-    Longitude_masked      Neighborhood  Breed
-2           -71.1109     Mid-Cambridge Single
-37          -71.1362 Neighborhood Nine Single
-58          -71.1143     Cambridgeport Single
-96          -71.1015     Cambridgeport Single
-171         -71.1311 Neighborhood Nine Single
-224         -71.1329   North Cambridge  Mixed</code></pre>
+<pre><code>  Dog_Name                  Dog_Breed Location_masked Latitude_masked
+1     Lucy                     Poodle              NA         42.3696
+2     Luna                LABRADOODLE              NA         42.3860
+3  Charlie         Border Terrier Mix              NA         42.3596
+4   Cooper German Shorthaired Pointer              NA         42.3573
+5  Charlie           Golden Retriever              NA         42.3895
+6     Luna                Mixed Breed              NA         42.3913
+  Longitude_masked      Neighborhood  Breed
+1         -71.1109     Mid-Cambridge Single
+2         -71.1362 Neighborhood Nine Single
+3         -71.1143     Cambridgeport Single
+4         -71.1015     Cambridgeport Single
+5         -71.1311 Neighborhood Nine Single
+6         -71.1329   North Cambridge  Mixed</code></pre>
 </div>
 </div>
 </section>
 <section id="frequency-table" class="slide level2">
 <h2>Frequency Table</h2>
+<p>Distributions of categorical variables can be presented in tables and summarized in bar charts.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name)  <span class="co"># Handy function</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name)  <span class="co"># Handy function</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Dog_Name  n
 1  Charlie 14
@@ -942,55 +1100,29 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 </div>
 </div><div class="column fragment" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dogs_top5, </span>
-<span id="cb39-2"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Dog_Name)) <span class="sc">+</span></span>
-<span id="cb39-3"><a></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dogs_top5, </span>
+<span id="cb64-2"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Dog_Name)) <span class="sc">+</span></span>
+<span id="cb64-3"><a></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-26-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-43-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div></div>
-</section>
-<section id="frequency-table-1" class="slide level2">
-<h2>Frequency Table</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Dog_Name  n
-1  Charlie 14
-2   Cooper  8
-3     Lucy 10
-4     Luna 14
-5    Rosie 10</code></pre>
+<div class="fragment">
+<p><strong>Q: Why can’t we use mean or SD here?</strong></p>
 </div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Dog_Name  n
-1  Charlie 14
-2     Luna 14
-3     Lucy 10
-4    Rosie 10
-5   Cooper  8</code></pre>
-</div>
-</div>
-</div></div>
 </section>
 <section class="slide level2">
 
 <h3 id="another-ggplot2-geom-geom_col">Another <code>ggplot2</code> <code>geom</code>: <code>geom_col()</code></h3>
 <p>If you have already aggregated the data, you will use <code>geom_col()</code> instead of <code>geom_bar()</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>dog_counts <span class="ot">&lt;-</span> <span class="fu">count</span>(dogs_top5, Dog_Name)</span>
-<span id="cb44-2"><a></a>dog_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a>dog_counts <span class="ot">&lt;-</span> <span class="fu">count</span>(dogs_top5, Dog_Name)</span>
+<span id="cb65-2"><a></a>dog_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Dog_Name  n
 1  Charlie 14
@@ -1000,17 +1132,18 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 5    Rosie 10</code></pre>
 </div>
 </div>
+<p><br></p>
 <div class="cell columns column-output-location" data-layout-align="center">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dog_counts,</span>
-<span id="cb46-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Dog_Name,</span>
-<span id="cb46-3"><a></a>                     <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb46-4"><a></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dog_counts,</span>
+<span id="cb67-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Dog_Name,</span>
+<span id="cb67-3"><a></a>                     <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb67-4"><a></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-30-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-45-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1021,8 +1154,8 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 <h3 id="another-ggplot2-geom-geom_col-1">Another <code>ggplot2</code> <code>geom</code>: <code>geom_col()</code></h3>
 <p>And you can use <code>fct_reorder</code> to order bars by value</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>dog_counts <span class="ot">&lt;-</span> <span class="fu">count</span>(dogs_top5, Dog_Name)</span>
-<span id="cb47-2"><a></a>dog_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a>dog_counts <span class="ot">&lt;-</span> <span class="fu">count</span>(dogs_top5, Dog_Name)</span>
+<span id="cb68-2"><a></a>dog_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Dog_Name  n
 1  Charlie 14
@@ -1032,17 +1165,19 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 5    Rosie 10</code></pre>
 </div>
 </div>
+<p><br></p>
 <div class="cell columns column-output-location" data-layout-align="center">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">library</span>(forcats)</span>
-<span id="cb49-2"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dog_counts,</span>
-<span id="cb49-3"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(Dog_Name, n), <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb49-4"><a></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a><span class="fu">library</span>(forcats)</span>
+<span id="cb70-2"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dog_counts,</span>
+<span id="cb70-3"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(Dog_Name, n),</span>
+<span id="cb70-4"><a></a>                     <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb70-5"><a></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-32-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-47-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1050,10 +1185,12 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 </section>
 <section id="contingency-table" class="slide level2">
 <h2>Contingency Table</h2>
+<p>To compare 2 categorical variables, we can use a contingency table</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="co"># Quick &amp; easy</span></span>
+<span id="cb71-2"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Dog_Name  Breed  n
 1   Charlie  Mixed  4
@@ -1068,15 +1205,32 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 10    Rosie Single  9</code></pre>
 </div>
 </div>
+<p><br></p>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="co"># More common presentation</span></span>
+<span id="cb73-2"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed) <span class="sc">%&gt;%</span></span>
+<span id="cb73-3"><a></a>  tidyr<span class="sc">:::</span><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Breed,</span>
+<span id="cb73-4"><a></a>              <span class="at">values_from =</span> n) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Dog_Name Mixed Single
+1  Charlie     4     10
+2   Cooper     1      7
+3     Lucy     2      8
+4     Luna     7      7
+5    Rosie     1      9</code></pre>
+</div>
+</div>
+</div>
 </div><div class="column fragment" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dogs_top5, </span>
-<span id="cb52-2"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Dog_Name, <span class="at">fill =</span> Breed)) <span class="sc">+</span></span>
-<span id="cb52-3"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dogs_top5, </span>
+<span id="cb75-2"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Dog_Name, <span class="at">fill =</span> Breed)) <span class="sc">+</span></span>
+<span id="cb75-3"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-34-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-50-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1095,13 +1249,13 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dogs_top5, </span>
-<span id="cb53-2"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Dog_Name, <span class="at">fill =</span> Breed)) <span class="sc">+</span></span>
-<span id="cb53-3"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> dogs_top5, </span>
+<span id="cb76-2"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Dog_Name, <span class="at">fill =</span> Breed)) <span class="sc">+</span></span>
+<span id="cb76-3"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-35-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="lecture04_wk02mon_files/figure-revealjs/unnamed-chunk-51-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1113,7 +1267,7 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Dog_Name  Breed  n
 1   Charlie  Mixed  4
@@ -1130,9 +1284,9 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed) <span class="sc">%&gt;%</span></span>
-<span id="cb56-2"><a></a>  <span class="fu">group_by</span>(Dog_Name) <span class="sc">%&gt;%</span>     <span class="do">## Conditions on Dog Name</span></span>
-<span id="cb56-3"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))  <span class="do">## Adds/changes columns </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed) <span class="sc">%&gt;%</span></span>
+<span id="cb79-2"><a></a>  <span class="fu">group_by</span>(Dog_Name) <span class="sc">%&gt;%</span>     <span class="do">## Conditions on Dog Name</span></span>
+<span id="cb79-3"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))  <span class="do">## Adds/changes columns </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 4
 # Groups:   Dog_Name [5]
@@ -1158,9 +1312,9 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed) <span class="sc">%&gt;%</span></span>
-<span id="cb58-2"><a></a>  <span class="fu">group_by</span>(Dog_Name) <span class="sc">%&gt;%</span>     <span class="do">## Conditions on Dog Name</span></span>
-<span id="cb58-3"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))  <span class="do">## Adds/changes columns </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed) <span class="sc">%&gt;%</span></span>
+<span id="cb81-2"><a></a>  <span class="fu">group_by</span>(Dog_Name) <span class="sc">%&gt;%</span>     <span class="do">## Conditions on Dog Name</span></span>
+<span id="cb81-3"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))  <span class="do">## Adds/changes columns </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 4
 # Groups:   Dog_Name [5]
@@ -1180,9 +1334,9 @@ s = \sqrt{\tfrac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2}
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed) <span class="sc">%&gt;%</span></span>
-<span id="cb60-2"><a></a>  <span class="fu">group_by</span>(Breed) <span class="sc">%&gt;%</span>     <span class="do">## Conditions on Breed</span></span>
-<span id="cb60-3"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))  <span class="do">## Adds/changes columns </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed) <span class="sc">%&gt;%</span></span>
+<span id="cb83-2"><a></a>  <span class="fu">group_by</span>(Breed) <span class="sc">%&gt;%</span>     <span class="do">## Conditions on Breed</span></span>
+<span id="cb83-3"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))  <span class="do">## Adds/changes columns </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 4
 # Groups:   Breed [2]

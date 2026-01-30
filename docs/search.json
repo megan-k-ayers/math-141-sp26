@@ -1040,7 +1040,7 @@
     "href": "slides/lecture04_wk02mon.html#announcements",
     "title": "Math 141",
     "section": "Announcements",
-    "text": "Announcements\n\nThe teaching team would love to see you in office hours!\n\nInstructor office hours: For individual or small group help on problems or concepts\nCourse assistant office hours: To work on assignments with your peers and get help from the course assistants when you are stuck\n\nReminder: If you haven’t already, make sure your access to Gradescope is set up."
+    "text": "Announcements\n\nThe teaching team would love to see you in office hours!\n\nMegan’s office hours: For individual or small group help on problems or concepts\nCourse assistant office hours: To work on assignments with your peers and get help from the course assistants when you are stuck\n\n\n\n\nReminder: If you haven’t already, make sure your access to Gradescope is set up.\nPlease select pages for each problem part on Gradescope"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#import-the-data",
@@ -1082,7 +1082,7 @@
     "href": "slides/lecture04_wk02mon.html#measures-of-center-2",
     "title": "Math 141",
     "section": "Measures of Center",
-    "text": "Measures of Center\n\n\nMean: Average of all the observations\n\n\\(n\\) = Number of cases (sample size)\n\\(x_i\\) = value of the i-th observation\nDenote by \\(\\bar{x}\\)\n\n\\[\n\\bar{x}  = \\frac{1}{n} \\sum_{i = 1}^n x_i\n\\]\n\n# Test out on first 6 values\nhead(biketown$Distance_Miles)\n\n[1] 1.91 0.72 3.42 1.81 4.51 5.54\n\n\n\nCompute in R:\n\nmean(biketown$Distance_Miles)\n\n[1] 2.044768"
+    "text": "Measures of Center\n\n\nMean: Average of all the observations\n\n\\(n\\) = Number of cases (sample size)\n\\(x_i\\) = value of the i-th observation\nDenote by \\(\\bar{x}\\)\n\n\\[\n\\bar{x}  = \\frac{1}{n} \\sum_{i = 1}^n x_i\n\\]\n\n\n\n# Test out on first 6 values\nhead(biketown$Distance_Miles)\n\n[1] 1.91 0.72 3.42 1.81 4.51 5.54\n\n\n\n\n\n\n(1.91 + 0.72 + 3.42 + 1.81 + 4.51 + 5.54) / 6\n\n[1] 2.985\n\n\n\n\n\n\n# Compute in R for all values\nmean(biketown$Distance_Miles)\n\n[1] 2.044768"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-center-3",
@@ -1096,14 +1096,14 @@
     "href": "slides/lecture04_wk02mon.html#measures-of-center-4",
     "title": "Math 141",
     "section": "Measures of Center",
-    "text": "Measures of Center\n\n\nMedian: Middle value\n\nHalf of the data falls below the median\nDenote by \\(m\\)\nIf \\(n\\) is even, then it is the average of the middle two values\n\n\n# Test out on first 6 values\nhead(biketown$Distance_Miles)\n\n[1] 1.91 0.72 3.42 1.81 4.51 5.54\n\n\n\nCompute in R:\n\nmedian(biketown$Distance_Miles)\n\n[1] 1.48"
+    "text": "Measures of Center\n\n\nMedian: Middle value\n\nHalf of the data falls below the median\nDenote by \\(m\\)\nIf \\(n\\) is even, then it is the average of the middle two values\n\n\n# Test out on first 6 values\nhead(biketown$Distance_Miles)\n\n[1] 1.91 0.72 3.42 1.81 4.51 5.54\n\n\n\n\n\nsort(head(biketown$Distance_Miles))\n\n[1] 0.72 1.81 1.91 3.42 4.51 5.54\n\n\n\n\n\n\n(3.42 + 1.91) / 2\n\n[1] 2.665\n\n\n\n\nCompute in R:\n\nmedian(biketown$Distance_Miles)\n\n[1] 1.48"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-center-5",
     "href": "slides/lecture04_wk02mon.html#measures-of-center-5",
     "title": "Math 141",
     "section": "Measures of Center",
-    "text": "Measures of Center\n\n\nWhy is the mean larger than the median?\n\ndata.frame(mean_miles = mean(biketown$Distance_Miles),\n           median_miles = median(biketown$Distance_Miles))\n\n  mean_miles median_miles\n1   2.044768         1.48\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe say that asymmetric distributions are skewed. This is “positive skewed” or “right skewed.”"
+    "text": "Measures of Center\n\n\nWhy is the mean larger than the median?\n\ndata.frame(mean_miles = mean(biketown$Distance_Miles),\n           median_miles = median(biketown$Distance_Miles))\n\n  mean_miles median_miles\n1   2.044768         1.48\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswer: the distribution is skewed. In skewed distributions, the mean is pulled farther in the direction of skew than the median."
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#computing-measures-of-center-by-groups",
@@ -1117,7 +1117,7 @@
     "href": "slides/lecture04_wk02mon.html#computing-measures-of-center-by-groups-1",
     "title": "Math 141",
     "section": "Computing Measures of Center by Groups",
-    "text": "Computing Measures of Center by Groups\n\n\nHandy R function: aggregate()\n\n\n# Calculate group *MEANS*\naggregate(Distance_Miles ~ PaymentPlan, biketown,\n          mean)\n\n  PaymentPlan Distance_Miles\n1      Casual       2.562520\n2  Subscriber       1.447029\n\n\n\n\n\n\n# Calculate group *MEDIANS*\naggregate(Distance_Miles ~ PaymentPlan, biketown,\n          median)\n\n  PaymentPlan Distance_Miles\n1      Casual           2.03\n2  Subscriber           1.02"
+    "text": "Computing Measures of Center by Groups\n\n\nHandy dplyr functions that we’ll learn: group_by() and summarize().\n\n\nlibrary(dplyr)\n\n# Calculate group *MEANS*\nbiketown %&gt;%\n  group_by(PaymentPlan) %&gt;%\n  summarize(mean_dist = mean(Distance_Miles))\n\n# A tibble: 2 × 2\n  PaymentPlan mean_dist\n  &lt;chr&gt;           &lt;dbl&gt;\n1 Casual           2.56\n2 Subscriber       1.45\n\n\n\n\n\n\n# Calculate group *MEDIANS*\nbiketown %&gt;%\n  group_by(PaymentPlan) %&gt;%\n  summarize(median_dist = median(Distance_Miles))\n\n# A tibble: 2 × 2\n  PaymentPlan median_dist\n  &lt;chr&gt;             &lt;dbl&gt;\n1 Casual             2.03\n2 Subscriber         1.02"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability",
@@ -1131,14 +1131,14 @@
     "href": "slides/lecture04_wk02mon.html#measures-of-variability-1",
     "title": "Math 141",
     "section": "Measures of Variability",
-    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\nFind how much each observation deviates from the mean.\nCompute the average of the deviations.\n\n\\[\n\\frac{1}{n} \\sum_{i = 1}^n (x_i - \\bar{x})\n\\]"
+    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\nFind how much each observation deviates from the mean.\nIdea: Compute the average of the deviations\n\n\\[\n\\frac{1}{n} \\sum_{i = 1}^n (x_i - \\bar{x})\n\\]"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-2",
     "href": "slides/lecture04_wk02mon.html#measures-of-variability-2",
     "title": "Math 141",
     "section": "Measures of Variability",
-    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\nFind how much each observation deviates from the mean.\nCompute the average of the deviations.\n\n\\[\n\\frac{1}{n} \\sum_{i = 1}^n (x_i - \\bar{x})\n\\]\n\n\n# Test out on first 6 values\nhead(biketown$Distance_Miles)\n\n[1] 1.91 0.72 3.42 1.81 4.51 5.54\n\n\n\n\nProblem?"
+    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\nFind how much each observation deviates from the mean.\nIdea: Compute the average of the deviations\n\n\\[\n\\frac{1}{n} \\sum_{i = 1}^n (x_i - \\bar{x})\n\\]\n\n\n# Test out on first 6 values\nhead(biketown$Distance_Miles)\n\n[1] 1.91 0.72 3.42 1.81 4.51 5.54\n\n\n\n\nProblem?\n\n\n\n\n\n# Calculate mean by hand\n(1.91 + 0.72 + 3.42 + 1.81 + 4.51 + 5.54) / 6\n\n[1] 2.985\n\n\n\n\n\n\n# Calculate average deviations by hand\n((1.91 - 2.985) + (0.72 - 2.985) + \n  (3.42 - 2.985) + (1.81 - 2.985) +\n  (4.51 - 2.985) + (5.54 - 2.985)) / 6\n\n[1] 0"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-3",
@@ -1152,7 +1152,7 @@
     "href": "slides/lecture04_wk02mon.html#measures-of-variability-4",
     "title": "Math 141",
     "section": "Measures of Variability",
-    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\nNEW proposal:\n\nFind how much each observation deviates from the mean.\nCompute the average of the squared deviations.\n\n\n\n# Test out on first 6 values\nhead(biketown$Distance_Miles)\n\n[1] 1.91 0.72 3.42 1.81 4.51 5.54"
+    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\nNEW proposal:\n\nFind how much each observation deviates from the mean.\nCompute the average of the squared deviations.\n\n\n\n# Test out on first 6 values\nhead(biketown$Distance_Miles)\n\n[1] 1.91 0.72 3.42 1.81 4.51 5.54\n\n\n\n\n\n\n\n\n# Calculate mean by hand\n(1.91 + 0.72 + 3.42 + 1.81 + 4.51 + 5.54) / 6\n\n[1] 2.985\n\n\n\n\n\n\n# Calculate average deviations by hand\n((1.91 - 2.985)^2 + (0.72 - 2.985)^2 + \n  (3.42 - 2.985)^2 + (1.81 - 2.985)^2 +\n  (4.51 - 2.985)^2 + (5.54 - 2.985)^2) / 6\n\n[1] 2.784892"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-5",
@@ -1180,28 +1180,28 @@
     "href": "slides/lecture04_wk02mon.html#measures-of-variability-8",
     "title": "Math 141",
     "section": "Measures of Variability",
-    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\nFind how much each observation deviates from the mean.\nCompute the (nearly) average of the squared deviations.\nCalled sample variance \\(s^2\\).\nThe square root of the sample variance is called the sample standard deviation \\(s\\)."
+    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\n\nFind how much each observation deviates from the mean.\nCompute the (nearly) average of the squared deviations (\\(s^2\\)).\nBecause observations are squared, units differ from original data.\n\n\n\n\nThe square root of the sample variance is called the sample standard deviation \\(s\\).\n\n\n\n\n\nCompute in R:\n\nvar(biketown$Distance_Miles)  # Variance\n\n[1] 3.805638\n\n\n\n\nsd(biketown$Distance_Miles)   # Standard deviation \n\n[1] 1.950804\n\n\n\n\n\n\nsqrt(var(biketown$Distance_Miles))\n\n[1] 1.950804"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-9",
     "href": "slides/lecture04_wk02mon.html#measures-of-variability-9",
     "title": "Math 141",
     "section": "Measures of Variability",
-    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\nFind how much each observation deviates from the mean.\nCompute the (nearly) average of the squared deviations.\nCalled sample variance \\(s^2\\).\nThe square root of the sample variance is called the sample standard deviation \\(s\\).\n\n\\[\ns = \\sqrt{\\tfrac{1}{n - 1} \\sum_{i = 1}^n (x_i - \\bar{x})^2}\n\\]"
+    "text": "Measures of Variability\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\n25% of all observations are less than the first quartile Q1\n25% of all observations are greater than the third quartile Q3\n\n\nCompute with R:\n\nIQR(biketown$Distance_Miles)\n\n[1] 1.89"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-10",
     "href": "slides/lecture04_wk02mon.html#measures-of-variability-10",
     "title": "Math 141",
     "section": "Measures of Variability",
-    "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\nFind how much each observation deviates from the mean.\nCompute the (nearly) average of the squared deviations.\nCalled sample variance \\(s^2\\).\nThe square root of the sample variance is called the sample standard deviation \\(s\\).\n\n\\[\ns = \\sqrt{\\tfrac{1}{n - 1} \\sum_{i = 1}^n (x_i - \\bar{x})^2}\n\\]\n\nCompute in R:\n\nvar(biketown$Distance_Miles)  # Variance\n\n[1] 3.805638\n\n\n\n\nsd(biketown$Distance_Miles)   # Standard deviation \n\n[1] 1.950804\n\n\n\n\nsqrt(var(biketown$Distance_Miles))\n\n[1] 1.950804"
+    "text": "Measures of Variability\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\n\n25% of all observations are less than the first quartile Q1\n25% of all observations are greater than the third quartile Q3\n\n\n\nCompute with R:\n\nIQR(biketown$Distance_Miles)\n\n[1] 1.89"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-11",
     "href": "slides/lecture04_wk02mon.html#measures-of-variability-11",
     "title": "Math 141",
     "section": "Measures of Variability",
-    "text": "Measures of Variability\n\n\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):"
+    "text": "Measures of Variability\n\n\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\nCompute with R:\n\nIQR(biketown$Distance_Miles)\n\n[1] 1.89"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-12",
@@ -1222,7 +1222,7 @@
     "href": "slides/lecture04_wk02mon.html#comparing-measures-of-variability",
     "title": "Math 141",
     "section": "Comparing Measures of Variability",
-    "text": "Comparing Measures of Variability\n\nWhich is more robust to outliers, the IQR or \\(s\\)?\nWhich is more commonly used, the IQR or \\(s\\)?\n\n\n\nagg_sd &lt;- aggregate(Distance_Miles ~ PaymentPlan, biketown, sd) \nagg_iqr &lt;- aggregate(Distance_Miles ~ PaymentPlan, biketown, IQR)\ndata.frame(PaymentPlan = agg_sd$PaymentPlan,\n           sd_miles = round(agg_sd$Distance_Miles, 3),\n           iqr_miles = round(agg_iqr$Distance_Miles, 3))\n\n  PaymentPlan sd_miles iqr_miles\n1      Casual    2.153     2.248\n2  Subscriber    1.476     1.210"
+    "text": "Comparing Measures of Variability\n\nWhich is more robust to outliers, the IQR or \\(s\\)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhich is more commonly used, the IQR or \\(s\\)?"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#new-data-set-cambridge-dogs",
@@ -1236,14 +1236,14 @@
     "href": "slides/lecture04_wk02mon.html#cambridge-dogs-data-set",
     "title": "Math 141",
     "section": "Cambridge dogs data set",
-    "text": "Cambridge dogs data set\nMay want to focus on the dogs with the 5 most common names\n\ndogs &lt;- read.csv(\"https://data.cambridgema.gov/api/views/sckh-3xyx/rows.csv\")\n\n# Useful wrangling that we will come back to\ndogs$Breed &lt;- ifelse(dogs$Dog_Breed == \"Mixed Breed\", \"Mixed\", \"Single\")\ndogs_top5 &lt;- dogs[dogs$Dog_Name %in% c(\"Luna\", \"Charlie\", \"Lucy\",\n                                       \"Cooper\", \"Rosie\"), ]\n\nhead(dogs_top5)\n\n    Dog_Name                  Dog_Breed Location_masked Latitude_masked\n2       Lucy                     Poodle              NA         42.3696\n37      Luna                LABRADOODLE              NA         42.3860\n58   Charlie         Border Terrier Mix              NA         42.3596\n96    Cooper German Shorthaired Pointer              NA         42.3573\n171  Charlie           Golden Retriever              NA         42.3895\n224     Luna                Mixed Breed              NA         42.3913\n    Longitude_masked      Neighborhood  Breed\n2           -71.1109     Mid-Cambridge Single\n37          -71.1362 Neighborhood Nine Single\n58          -71.1143     Cambridgeport Single\n96          -71.1015     Cambridgeport Single\n171         -71.1311 Neighborhood Nine Single\n224         -71.1329   North Cambridge  Mixed"
+    "text": "Cambridge dogs data set\nMay want to focus on the dogs with the 5 most common names\n\ndogs &lt;- read.csv(\"https://data.cambridgema.gov/api/views/sckh-3xyx/rows.csv\")\n\n# Useful wrangling that we will come back to\ndogs_top5 &lt;- dogs %&gt;%\n  mutate(Breed = case_when(Dog_Breed == \"Mixed Breed\" ~ \"Mixed\",\n                           TRUE ~ \"Single\")) %&gt;%\n  filter(Dog_Name %in% c(\"Luna\", \"Charlie\", \"Lucy\", \"Cooper\", \"Rosie\"))\n\n\nhead(dogs_top5)\n\n  Dog_Name                  Dog_Breed Location_masked Latitude_masked\n1     Lucy                     Poodle              NA         42.3696\n2     Luna                LABRADOODLE              NA         42.3860\n3  Charlie         Border Terrier Mix              NA         42.3596\n4   Cooper German Shorthaired Pointer              NA         42.3573\n5  Charlie           Golden Retriever              NA         42.3895\n6     Luna                Mixed Breed              NA         42.3913\n  Longitude_masked      Neighborhood  Breed\n1         -71.1109     Mid-Cambridge Single\n2         -71.1362 Neighborhood Nine Single\n3         -71.1143     Cambridgeport Single\n4         -71.1015     Cambridgeport Single\n5         -71.1311 Neighborhood Nine Single\n6         -71.1329   North Cambridge  Mixed"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#frequency-table",
     "href": "slides/lecture04_wk02mon.html#frequency-table",
     "title": "Math 141",
     "section": "Frequency Table",
-    "text": "Frequency Table\n\n\n\ncount(dogs_top5, Dog_Name)  # Handy function\n\n  Dog_Name  n\n1  Charlie 14\n2   Cooper  8\n3     Lucy 10\n4     Luna 14\n5    Rosie 10\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name)) +\n  geom_bar()"
+    "text": "Frequency Table\nDistributions of categorical variables can be presented in tables and summarized in bar charts.\n\n\n\ncount(dogs_top5, Dog_Name)  # Handy function\n\n  Dog_Name  n\n1  Charlie 14\n2   Cooper  8\n3     Lucy 10\n4     Luna 14\n5    Rosie 10\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\nQ: Why can’t we use mean or SD here?"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#frequency-table-1",
@@ -1257,7 +1257,7 @@
     "href": "slides/lecture04_wk02mon.html#contingency-table",
     "title": "Math 141",
     "section": "Contingency Table",
-    "text": "Contingency Table\n\n\n\ncount(dogs_top5, Dog_Name, Breed)\n\n   Dog_Name  Breed  n\n1   Charlie  Mixed  4\n2   Charlie Single 10\n3    Cooper  Mixed  1\n4    Cooper Single  7\n5      Lucy  Mixed  2\n6      Lucy Single  8\n7      Luna  Mixed  7\n8      Luna Single  7\n9     Rosie  Mixed  1\n10    Rosie Single  9\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name, fill = Breed)) +\n  geom_bar(position = \"dodge\")"
+    "text": "Contingency Table\nTo compare 2 categorical variables, we can use a contingency table\n\n\n\n# Quick & easy\ncount(dogs_top5, Dog_Name, Breed)\n\n   Dog_Name  Breed  n\n1   Charlie  Mixed  4\n2   Charlie Single 10\n3    Cooper  Mixed  1\n4    Cooper Single  7\n5      Lucy  Mixed  2\n6      Lucy Single  8\n7      Luna  Mixed  7\n8      Luna Single  7\n9     Rosie  Mixed  1\n10    Rosie Single  9\n\n\n\n\n\n# More common presentation\ncount(dogs_top5, Dog_Name, Breed) %&gt;%\n  tidyr:::pivot_wider(names_from = Breed,\n              values_from = n) %&gt;% as.data.frame()\n\n  Dog_Name Mixed Single\n1  Charlie     4     10\n2   Cooper     1      7\n3     Lucy     2      8\n4     Luna     7      7\n5    Rosie     1      9\n\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name, fill = Breed)) +\n  geom_bar(position = \"dodge\")"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#conditional-proportions",
@@ -1440,5 +1440,26 @@
     "title": "Math 141",
     "section": "Announcements/reminders",
     "text": "Announcements/reminders\n\nCourse assistant office hours are posted on Moodle"
+  },
+  {
+    "objectID": "slides/lecture04_wk02mon.html#measures-of-center-6",
+    "href": "slides/lecture04_wk02mon.html#measures-of-center-6",
+    "title": "Math 141",
+    "section": "Measures of Center",
+    "text": "Measures of Center\nNote: The mean is very sensitive to outliers, while the median is not.\n\nmy_data &lt;- c(1, 2, 5, 7, 8, 10)\nmy_data_with_outlier &lt;- c(1, 2, 5, 7, 8, 100)\n\n\n\n\n\n\nmean(my_data)\n\n[1] 5.5\n\n\n\n\nmean(my_data_with_outlier)\n\n[1] 20.5\n\n\n\n\n\n\n\n\n\nmedian(my_data)\n\n[1] 6\n\n\n\n\nmedian(my_data_with_outlier)\n\n[1] 6\n\n\n\n\n\n\nWe call the median a robust statistic."
+  },
+  {
+    "objectID": "slides/lecture04_wk02mon.html#visualizing-standard-deviation",
+    "href": "slides/lecture04_wk02mon.html#visualizing-standard-deviation",
+    "title": "Math 141",
+    "section": "Visualizing Standard Deviation",
+    "text": "Visualizing Standard Deviation\n\nThe standard deviation measures the typical size of deviations from the mean.\nFor most data sets, the large majority of observations are within 2 standard deviations of the mean.\n\n\n\nsd(biketown$Distance_Miles)\n\n[1] 1.950804"
+  },
+  {
+    "objectID": "slides/lecture04_wk02mon.html#visualizing-the-iqr",
+    "href": "slides/lecture04_wk02mon.html#visualizing-the-iqr",
+    "title": "Math 141",
+    "section": "Visualizing the IQR",
+    "text": "Visualizing the IQR\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\n\nquantile(biketown$Distance_Miles, c(0.25, 0.5, 0.75))\n\n 25%  50%  75% \n0.79 1.48 2.68"
   }
 ]
