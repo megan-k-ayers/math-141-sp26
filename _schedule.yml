@@ -44,10 +44,10 @@ scheduled-docs:
           docs:
             - type: Reading
               href: readings/reading04_wk01fri.qmd
-            # - type: Slides
-            #   href: slides/lecture03_wk01fri.qmd
-            # - type: Download HW
-            #   href: hw/hw01.zip
+            - type: Slides
+              href: slides/lecture03_wk01fri.qmd
+            - type: Download HW
+              href: hw/hw01.zip
       resources:
         - 'Join Slack (invite link on <a href=https://moodle.reed.edu/course/view.php?id=6317>Moodle</a>)'
         - 'Gradescope course entry code: <mark>8DDDY6</mark>'
