@@ -106,6 +106,10 @@ qod %>% count(clean.answer) %>%
 library(tidyverse)
 ```
 
+<br>
+
+Also, above is an example of a code comment: `# Load necessary packages`
+
 ------------------------------------------------------------------------
 
 ## Data Setting: [Portland Bikeshare Data](https://biketownpdx.com)

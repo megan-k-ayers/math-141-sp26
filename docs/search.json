@@ -256,7 +256,7 @@
     "href": "slides/lecture03_wk01fri.html#load-necessary-packages",
     "title": "Math 141",
     "section": "Load Necessary Packages",
-    "text": "Load Necessary Packages\n\n\n\n\n\nggplot2 is part of this collection of data science packages.\n\n# Load necessary packages\nlibrary(tidyverse)"
+    "text": "Load Necessary Packages\n\n\n\n\n\nggplot2 is part of this collection of data science packages.\n\n# Load necessary packages\nlibrary(tidyverse)\n\n\nAlso, above is an example of a code comment: # Load necessary packages"
   },
   {
     "objectID": "slides/lecture03_wk01fri.html#data-setting-portland-bikeshare-data",
