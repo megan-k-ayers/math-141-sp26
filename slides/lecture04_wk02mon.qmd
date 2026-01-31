@@ -71,13 +71,16 @@ library(dplyr)
 
 ```{r, echo = FALSE, eval = FALSE}
 
-library(tidyverse)
 qod <- read.csv("data/qod-music.csv")
-qod %>% count(Cleaned) %>%
-  ggplot(aes(y = reorder(Cleaned, n), x = n)) +
-  geom_col() +
-  ylab("") +
+qod$Section <- substr(qod$Section, 3, 3)
+qod %>% 
+  ggplot(aes(y = Section, fill = Cleaned)) +
+  geom_bar(position = "fill") +
+  ggtitle("Should we play music in lab?") +
   theme_classic()
+
+
+table(qod$Section[qod$Notes!= ""], qod$Notes[qod$Notes!= ""])
 
 ```
 
@@ -812,10 +815,10 @@ mu <- mean(biketown$Distance_Miles)
   annotate("rect", xmin = mu-2*s, xmax =  mu+2*s, ymin = 0, ymax = 2250,
            alpha = .3, fill = "dodgerblue") +
   annotate(geom= "label",x = mu, y = 200, label = "Mean") +
-  annotate(geom= "label",x = mu+2*s, y = 1100, label = "Mean + 2*sd") +
-  annotate(geom= "label",x = mu+s, y = 1100, label = "Mean + sd") +
-  annotate(geom= "label",x = mu-s, y = 1100, label = "Mean - sd") +
-  annotate(geom= "label",x = mu-2*s, y = 1100, label = "Mean - 2*sd") +
+  annotate(geom= "label",x = mu+2*s, y = 1100, label = "Mean + 2*s") +
+  annotate(geom= "label",x = mu+s, y = 1100, label = "Mean + s") +
+  annotate(geom= "label",x = mu-s, y = 1100, label = "Mean - s") +
+  annotate(geom= "label",x = mu-2*s, y = 1100, label = "Mean - 2*s") +
   geom_segment(x = mu - 2*s, xend = mu+2*s, y = 800, yend = 800, color = "dodgerblue", size = 1) +
   coord_cartesian(xlim=c(-2.5, 8))+
   theme_bw())
@@ -869,17 +872,19 @@ quantile(biketown$Distance_Miles, c(0.25, 0.5, 0.75))
 ```{r fig.height = 2, out.width = "60%", fig.asp=.45, echo = F}
 qs <- quantile(biketown$Distance_Miles, c(0.25, 0.5, 0.75))
 (gg2 <- ggplot(biketown, aes(x = Distance_Miles)) +
-  geom_histogram(bins = 50, color = "white") +
-  geom_vline(xintercept = qs[1], color = "dodgerblue", linewidth = .5) +
-  geom_vline(xintercept = qs[2], color = "dodgerblue", linewidth = .5) +
-  geom_vline(xintercept = qs[3], color = "dodgerblue", linewidth = .5) +
-  annotate("rect", xmin = qs[1], xmax =  qs[3], ymin = 0, ymax = 2250,
-           alpha = .3, fill = "dodgerblue") +
-  annotate(geom= "label", x = qs[1], y = 200, label = "Q1") +
-  annotate(geom= "label", x = qs[2], y = 1100, label = "Median") +
-  annotate(geom= "label", x = qs[3], y = 1100, label = "Q3") +
-  coord_cartesian(xlim=c(-0.5, 8))+
-  theme_bw())
+    geom_histogram(bins = 50, color = "white") +
+    geom_vline(xintercept = qs[1], color = "dodgerblue", linewidth = .5) +
+    geom_vline(xintercept = qs[2], color = "dodgerblue", linewidth = .5) +
+    geom_vline(xintercept = qs[3], color = "dodgerblue", linewidth = .5) +
+    annotate("rect", xmin = mu-2*s, xmax =  mu+2*s, ymin = 0, ymax = 2250,
+             alpha = 0, fill = "dodgerblue") +
+    annotate("rect", xmin = qs[1], xmax =  qs[3], ymin = 0, ymax = 2250,
+             alpha = .3, fill = "dodgerblue") +
+    annotate(geom= "label", x = qs[1], y = 200, label = "Q1") +
+    annotate(geom= "label", x = qs[2], y = 1100, label = "Median") +
+    annotate(geom= "label", x = qs[3], y = 1100, label = "Q3") +
+    coord_cartesian(xlim=c(-2.5, 8))+
+    theme_bw())
 ```
 :::
 
@@ -889,7 +894,7 @@ qs <- quantile(biketown$Distance_Miles, c(0.25, 0.5, 0.75))
 ## Comparing Measures of Variability
 
 ::: {.nonincremental}
--   Which is more robust to outliers, the IQR or $s$?
+-   **Q: Which is more robust to outliers, the IQR or $s$?**
 
 ::::: columns
 ::: {.column width="50%"}
@@ -916,7 +921,7 @@ gg2
 
 <br>
 
--   Which is more commonly used, the IQR or $s$?
+-   **Q: Which is more commonly used, the IQR or $s$?**
 
 
 # Summarizing Categorical Variables
@@ -975,7 +980,7 @@ ggplot(data = dogs_top5,
 :::::
 
 ::: fragment
-**Q: Why can't we use mean or SD here?**
+**Q: Why can't we use mean or standard deviation here?**
 :::
 
 ------------------------------------------------------------------------
@@ -1033,7 +1038,7 @@ To compare 2 categorical variables, we can use a contingency table
 ::: {.column width="50%"}
 
 ```{r}
-# Quick & easy
+# Using `count()` from dplyr
 count(dogs_top5, Dog_Name, Breed)
 ```
 
@@ -1042,9 +1047,7 @@ count(dogs_top5, Dog_Name, Breed)
 ::: fragment
 ```{r}
 # More common presentation
-count(dogs_top5, Dog_Name, Breed) %>%
-  tidyr:::pivot_wider(names_from = Breed,
-              values_from = n) %>% as.data.frame()
+table(dogs_top5$Dog_Name, dogs_top5$Breed)
 ```
 :::
 :::

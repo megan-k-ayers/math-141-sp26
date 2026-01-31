@@ -1000,7 +1000,7 @@ s^2 = \frac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2
 <section id="comparing-measures-of-variability" class="slide level2">
 <h2>Comparing Measures of Variability</h2>
 <ul>
-<li>Which is more robust to outliers, the IQR or <span class="math inline">\(s\)</span>?</li>
+<li><strong>Q: Which is more robust to outliers, the IQR or <span class="math inline">\(s\)</span>?</strong></li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1026,7 +1026,7 @@ s^2 = \frac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2
 </div></div>
 <p><br></p>
 <ul>
-<li class="fragment">Which is more commonly used, the IQR or <span class="math inline">\(s\)</span>?</li>
+<li class="fragment"><strong>Q: Which is more commonly used, the IQR or <span class="math inline">\(s\)</span>?</strong></li>
 </ul>
 </section>
 <section>
@@ -1113,7 +1113,7 @@ s^2 = \frac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2
 </div>
 </div></div>
 <div class="fragment">
-<p><strong>Q: Why can’t we use mean or SD here?</strong></p>
+<p><strong>Q: Why can’t we use mean or standard deviation here?</strong></p>
 </div>
 </section>
 <section class="slide level2">
@@ -1189,7 +1189,7 @@ s^2 = \frac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="co"># Quick &amp; easy</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="co"># Using `count()` from dplyr</span></span>
 <span id="cb71-2"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Dog_Name  Breed  n
@@ -1209,16 +1209,15 @@ s^2 = \frac{1}{n - 1} \sum_{i = 1}^n (x_i - \bar{x})^2
 <div class="fragment">
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="co"># More common presentation</span></span>
-<span id="cb73-2"><a></a><span class="fu">count</span>(dogs_top5, Dog_Name, Breed) <span class="sc">%&gt;%</span></span>
-<span id="cb73-3"><a></a>  tidyr<span class="sc">:::</span><span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Breed,</span>
-<span id="cb73-4"><a></a>              <span class="at">values_from =</span> n) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb73-2"><a></a><span class="fu">table</span>(dogs_top5<span class="sc">$</span>Dog_Name, dogs_top5<span class="sc">$</span>Breed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  Dog_Name Mixed Single
-1  Charlie     4     10
-2   Cooper     1      7
-3     Lucy     2      8
-4     Luna     7      7
-5    Rosie     1      9</code></pre>
+<pre><code>         
+          Mixed Single
+  Charlie     4     10
+  Cooper      1      7
+  Lucy        2      8
+  Luna        7      7
+  Rosie       1      9</code></pre>
 </div>
 </div>
 </div>

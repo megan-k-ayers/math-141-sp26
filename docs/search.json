@@ -1201,7 +1201,7 @@
     "href": "slides/lecture04_wk02mon.html#comparing-measures-of-variability",
     "title": "Math 141",
     "section": "Comparing Measures of Variability",
-    "text": "Comparing Measures of Variability\n\nWhich is more robust to outliers, the IQR or \\(s\\)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhich is more commonly used, the IQR or \\(s\\)?"
+    "text": "Comparing Measures of Variability\n\nQ: Which is more robust to outliers, the IQR or \\(s\\)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQ: Which is more commonly used, the IQR or \\(s\\)?"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#new-data-set-cambridge-dogs",
@@ -1222,14 +1222,14 @@
     "href": "slides/lecture04_wk02mon.html#frequency-table",
     "title": "Math 141",
     "section": "Frequency Table",
-    "text": "Frequency Table\nDistributions of categorical variables can be presented in tables and summarized in bar charts.\n\n\n\ncount(dogs_top5, Dog_Name)  # Handy function\n\n  Dog_Name  n\n1  Charlie 14\n2   Cooper  8\n3     Lucy 10\n4     Luna 14\n5    Rosie 10\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\nQ: Why can’t we use mean or SD here?"
+    "text": "Frequency Table\nDistributions of categorical variables can be presented in tables and summarized in bar charts.\n\n\n\ncount(dogs_top5, Dog_Name)  # Handy function\n\n  Dog_Name  n\n1  Charlie 14\n2   Cooper  8\n3     Lucy 10\n4     Luna 14\n5    Rosie 10\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\nQ: Why can’t we use mean or standard deviation here?"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#contingency-table",
     "href": "slides/lecture04_wk02mon.html#contingency-table",
     "title": "Math 141",
     "section": "Contingency Table",
-    "text": "Contingency Table\nTo compare 2 categorical variables, we can use a contingency table\n\n\n\n# Quick & easy\ncount(dogs_top5, Dog_Name, Breed)\n\n   Dog_Name  Breed  n\n1   Charlie  Mixed  4\n2   Charlie Single 10\n3    Cooper  Mixed  1\n4    Cooper Single  7\n5      Lucy  Mixed  2\n6      Lucy Single  8\n7      Luna  Mixed  7\n8      Luna Single  7\n9     Rosie  Mixed  1\n10    Rosie Single  9\n\n\n\n\n\n# More common presentation\ncount(dogs_top5, Dog_Name, Breed) %&gt;%\n  tidyr:::pivot_wider(names_from = Breed,\n              values_from = n) %&gt;% as.data.frame()\n\n  Dog_Name Mixed Single\n1  Charlie     4     10\n2   Cooper     1      7\n3     Lucy     2      8\n4     Luna     7      7\n5    Rosie     1      9\n\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name, fill = Breed)) +\n  geom_bar(position = \"dodge\")"
+    "text": "Contingency Table\nTo compare 2 categorical variables, we can use a contingency table\n\n\n\n# Using `count()` from dplyr\ncount(dogs_top5, Dog_Name, Breed)\n\n   Dog_Name  Breed  n\n1   Charlie  Mixed  4\n2   Charlie Single 10\n3    Cooper  Mixed  1\n4    Cooper Single  7\n5      Lucy  Mixed  2\n6      Lucy Single  8\n7      Luna  Mixed  7\n8      Luna Single  7\n9     Rosie  Mixed  1\n10    Rosie Single  9\n\n\n\n\n\n# More common presentation\ntable(dogs_top5$Dog_Name, dogs_top5$Breed)\n\n         \n          Mixed Single\n  Charlie     4     10\n  Cooper      1      7\n  Lucy        2      8\n  Luna        7      7\n  Rosie       1      9\n\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name, fill = Breed)) +\n  geom_bar(position = \"dodge\")"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#conditional-proportions",
