@@ -116,7 +116,7 @@
     "href": "slides/lecture05_wk02wed.html#filtering-cases",
     "title": "Math 141",
     "section": "Filtering cases",
-    "text": "Filtering cases\n\nWe remove rows according to logical conditions about variable cases:\n\nfilter(dogs, Dog_Name == \"Freddy\")\n\n  Dog_Name Dog_Breed      Neighborhood\n1   Freddy  Shep Mix Neighborhood Nine\n\n\n\n\n\n\nnot_fred &lt;- filter(dogs, Dog_Name != \"Freddy\")\nhead(not_fred)\n\n  Dog_Name            Dog_Breed      Neighborhood\n1     Thor                Boxer    East Cambridge\n2     Lucy               Poodle     Mid-Cambridge\n3     Ruby               Collie Neighborhood Nine\n4  Georgie           Lhasa Apso    West Cambridge\n5    Candy               Beagle   North Cambridge\n6 kylo-roo chihuahua yorkie mix           Baldwin"
+    "text": "Filtering cases\nWe remove rows according to logical conditions about variable cases:\n\n\n\n\nfreddy &lt;- filter(dogs, Dog_Name == \"Freddy\")\nfreddy\n\n  Dog_Name Dog_Breed      Neighborhood\n1   Freddy  Shep Mix Neighborhood Nine\n\n\n\n\n\n\nnot_freddy &lt;- filter(dogs, Dog_Name != \"Freddy\")\nhead(not_freddy)\n\n  Dog_Name            Dog_Breed      Neighborhood\n1     Thor                Boxer    East Cambridge\n2     Lucy               Poodle     Mid-Cambridge\n3     Ruby               Collie Neighborhood Nine\n4  Georgie           Lhasa Apso    West Cambridge\n5    Candy               Beagle   North Cambridge\n6 kylo-roo chihuahua yorkie mix           Baldwin"
   },
   {
     "objectID": "slides/lecture05_wk02wed.html#filtering-cases-1",
@@ -130,7 +130,7 @@
     "href": "slides/lecture05_wk02wed.html#the-pipe",
     "title": "Math 141",
     "section": "The pipe: %>%",
-    "text": "The pipe: %&gt;%\n\nThe pipe operator %&gt;% is a handy way to string multiple commands together in dplyr. Instead of:\n\nnot_fred &lt;- filter(dogs, Dog_Name != \"Freddy\")\nhead(not_fred)\n\n  Dog_Name            Dog_Breed      Neighborhood\n1     Thor                Boxer    East Cambridge\n2     Lucy               Poodle     Mid-Cambridge\n3     Ruby               Collie Neighborhood Nine\n4  Georgie           Lhasa Apso    West Cambridge\n5    Candy               Beagle   North Cambridge\n6 kylo-roo chihuahua yorkie mix           Baldwin\n\n\n\n\n\n… we can write:\n\ndogs %&gt;% filter(Dog_Name != \"Freddy\") %&gt;% head()\n\n  Dog_Name            Dog_Breed      Neighborhood\n1     Thor                Boxer    East Cambridge\n2     Lucy               Poodle     Mid-Cambridge\n3     Ruby               Collie Neighborhood Nine\n4  Georgie           Lhasa Apso    West Cambridge\n5    Candy               Beagle   North Cambridge\n6 kylo-roo chihuahua yorkie mix           Baldwin"
+    "text": "The pipe: %&gt;%\n\nThe pipe operator %&gt;% is a handy way to string multiple commands together in dplyr. Instead of:\n\nnot_freddy &lt;- filter(dogs, Dog_Name != \"Freddy\")\nhead(not_freddy)\n\n  Dog_Name            Dog_Breed      Neighborhood\n1     Thor                Boxer    East Cambridge\n2     Lucy               Poodle     Mid-Cambridge\n3     Ruby               Collie Neighborhood Nine\n4  Georgie           Lhasa Apso    West Cambridge\n5    Candy               Beagle   North Cambridge\n6 kylo-roo chihuahua yorkie mix           Baldwin\n\n\n\n\n\n… we can write:\n\ndogs %&gt;% filter(Dog_Name != \"Freddy\") %&gt;% head()\n\n  Dog_Name            Dog_Breed      Neighborhood\n1     Thor                Boxer    East Cambridge\n2     Lucy               Poodle     Mid-Cambridge\n3     Ruby               Collie Neighborhood Nine\n4  Georgie           Lhasa Apso    West Cambridge\n5    Candy               Beagle   North Cambridge\n6 kylo-roo chihuahua yorkie mix           Baldwin"
   },
   {
     "objectID": "slides/lecture05_wk02wed.html#extracting-variables",
@@ -144,7 +144,7 @@
     "href": "slides/lecture05_wk02wed.html#fyi-we-can-filter-cases-with-syntax-like-dfcondition",
     "title": "Math 141",
     "section": "FYI: We can filter cases with syntax like df[condition, ]",
-    "text": "FYI: We can filter cases with syntax like df[condition, ]\nRows and columns can be subset at the same time:\ndf[(rows to extract), (columns to extract)].\nIn this class we will rarely use this syntax, but it is common in the wild.\n\n\nkeep_names &lt;- c(\"Maggie\", \"Stella\")\ndogs[dogs$Dog_Name %in% keep_names, c(\"Dog_Name\", \"Dog_Breed\")]\n\n     Dog_Name      Dog_Breed\n104    Maggie    Mixed Breed\n406    Maggie    Mixed Breed\n520    Stella    Mixed Breed\n522    Stella french bulldog\n732    Maggie    Mixed Breed\n825    Maggie    Mixed Breed\n1334   Stella        Samoyed\n1354   Stella   Goldendoodle"
+    "text": "FYI: We can filter cases with syntax like df[condition, ]\nRows and columns can be subset at the same time:\ndf[(rows to extract), (columns to extract)].\n\nIn this class we will rarely use this syntax, but it is common in the wild.\n\n\nkeep_names &lt;- c(\"Maggie\", \"Stella\")\ndogs[dogs$Dog_Name %in% keep_names, c(\"Dog_Name\", \"Dog_Breed\")]\n\n     Dog_Name      Dog_Breed\n104    Maggie    Mixed Breed\n406    Maggie    Mixed Breed\n520    Stella    Mixed Breed\n522    Stella french bulldog\n732    Maggie    Mixed Breed\n825    Maggie    Mixed Breed\n1334   Stella        Samoyed\n1354   Stella   Goldendoodle"
   },
   {
     "objectID": "slides/lecture05_wk02wed.html#arranging-cases",
@@ -228,7 +228,7 @@
     "href": "slides/lecture05_wk02wed.html#handling-missing-data-1",
     "title": "Math 141",
     "section": "Handling Missing Data",
-    "text": "Handling Missing Data\n\nce_moderate &lt;- ce %&gt;%\n  filter(!is.na(IRAX), !is.na(INCOME))\n\nmean(ce_moderate$INCOME)\n\n[1] 57771.14\n\nmean(ce_moderate$IRAX)\n\n[1] 91075.09\n\n\n\n\nOr, to be very conservative about preserving data:\n\nmean(ce$INCOME, na.rm = TRUE)\n\n[1] 62480.12\n\nmean(ce$IRAX, na.rm = TRUE)\n\n[1] 91075.09\n\n\n\n\nWhy does the mean income value change between these approaches, even though there are no NA income values?"
+    "text": "Handling Missing Data\n\nce_moderate &lt;- ce %&gt;%\n  filter(!is.na(IRAX), !is.na(INCOME))\n\nmean(ce_moderate$INCOME)\n\n[1] 57771.14\n\nmean(ce_moderate$IRAX)\n\n[1] 91075.09\n\n\n\n\nOr, to be very conservative about preserving data:\n\nmean(ce$INCOME, na.rm = TRUE)\n\n[1] 62480.12\n\nmean(ce$IRAX, na.rm = TRUE)\n\n[1] 91075.09\n\n\n\n\n\nQ: Why does the mean income value change between these approaches, even though there are no NA income values?\n\n\nA: The moderate approach still drops rows with non-NA INCOME values"
   },
   {
     "objectID": "slides/lecture05_wk02wed.html#summarizing-within-groups-using-group_by-and-summarize",
@@ -249,7 +249,7 @@
     "href": "slides/lecture05_wk02wed.html#in-class-exercise-data-wrangling-pseudocode",
     "title": "Math 141",
     "section": "In-Class Exercise: Data wrangling pseudocode",
-    "text": "In-Class Exercise: Data wrangling pseudocode\nAnonymized data from a 2017 study on the effect of the higher education system on upward mobility (Chetty et al. 2017).\n\n\n\n\nregion: 1 for Northeast, 2 for Midwest, 3 for South, and 4 for West\nstate: State name\ntier_name: Tier defined by selectivity and type\nmr_kq5_pq1: Mobility rate, top 20% of the income distribution.\n\n\n\nload(\"data/colleges.Rdata\")\nhead(colleges[, c(\"region\", \"state\", \"tier_name\", \"mr_kq5_pq1\")])\n\n# A tibble: 6 × 4\n  region state tier_name                   mr_kq5_pq1\n  &lt;fct&gt;  &lt;chr&gt; &lt;fct&gt;                            &lt;dbl&gt;\n1 3      TX    Selective private              0.0144 \n2 3      GA    Nonselective 4-year public     0.0149 \n3 4      CO    Selective public               0.0188 \n4 1      NY    Selective private              0.0326 \n5 2      MI    Selective private              0.00956\n6 3      FL    Nonselective 4-year private    0.0379 \n\n\n\n\n\nWrite pseudocode to answer: what states in the west have the highest average mobility rate across their private and elite colleges?"
+    "text": "In-Class Exercise: Data wrangling pseudocode\nAnonymized data from a 2017 study on the effect of the higher education system on upward mobility (Chetty et al. 2017).\n\n\n\n\nregion: 1 for Northeast, 2 for Midwest, 3 for South, and 4 for West\nstate: State name\ntier_name: Tier defined by selectivity and type\nmr_kq5_pq1: Mobility rate, top 20% of the income distribution.\n\n\n\nload(\"data/colleges.Rdata\")\nhead(colleges[, c(\"region\", \"state\", \"tier_name\", \"mr_kq5_pq1\")])\n\n# A tibble: 6 × 4\n  region state tier_name                   mr_kq5_pq1\n  &lt;fct&gt;  &lt;chr&gt; &lt;fct&gt;                            &lt;dbl&gt;\n1 3      TX    Selective private              0.0144 \n2 3      GA    Nonselective 4-year public     0.0149 \n3 4      CO    Selective public               0.0188 \n4 1      NY    Selective private              0.0326 \n5 2      MI    Selective private              0.00956\n6 3      FL    Nonselective 4-year private    0.0379 \n\n\n\n\n\nIn groups of 3-4, on paper, write pseudocode to answer: what states in the west have the highest average mobility rate across their private and elite colleges?"
   },
   {
     "objectID": "slides/lecture03_wk01fri.html#load-necessary-packages",
@@ -1391,5 +1391,12 @@
     "title": "Math 141",
     "section": "Recap",
     "text": "Recap\nToday we defined:\n\nRandom processes, events, probability, probability models\nLaw of Large Numbers\nAddition Rule and Complement Rule\n\n\nNext time\n\nMore probability rules and an activity!"
+  },
+  {
+    "objectID": "slides/lecture05_wk02wed.html#dplyr-for-data-wrangling",
+    "href": "slides/lecture05_wk02wed.html#dplyr-for-data-wrangling",
+    "title": "Math 141",
+    "section": "dplyr for Data Wrangling",
+    "text": "dplyr for Data Wrangling\n\nFive common wrangling verbs:\n\ncount()\nfilter()\narrange()\nmutate()\nsummarize()\n\nOne action:\n\ngroup_by()"
   }
 ]

@@ -182,6 +182,7 @@ To fix how `R` **stores** a variable (or make a new one).
 :::::
 
 ------------------------------------------------------------------------
+
 ## `dplyr` for Data Wrangling
 
 -   Five common wrangling verbs:
@@ -205,11 +206,14 @@ count(dogs, Dog_Name)
 
 ## Filtering cases
 
-::: {.fragment}
 We remove rows according to logical conditions about variable cases:
 
+::::: columns
+::: {.column width=50%}
+::: {.fragment}
 ```{r}
-filter(dogs, Dog_Name == "Freddy")
+freddy <- filter(dogs, Dog_Name == "Freddy")
+freddy
 ```
 :::
 
@@ -218,10 +222,16 @@ filter(dogs, Dog_Name == "Freddy")
 ::: {.fragment}
 
 ```{r}
-not_fred <- filter(dogs, Dog_Name != "Freddy")
-head(not_fred)
+not_freddy <- filter(dogs, Dog_Name != "Freddy")
+head(not_freddy)
 ```
 :::
+:::
+
+::: {.column width=50% .fragment}
+![](img/freddie.jpeg){width=50%}
+:::
+:::::
 
 ------------------------------------------------------------------------
 
@@ -259,8 +269,8 @@ filter(dogs, Dog_Name == "Rosie" & Dog_Breed == "Goldendoodle")
 The pipe operator `%>%` is a handy way to string multiple commands together in `dplyr`. Instead of:
 
 ```{r}
-not_fred <- filter(dogs, Dog_Name != "Freddy")
-head(not_fred)
+not_freddy <- filter(dogs, Dog_Name != "Freddy")
+head(not_freddy)
 ```
 :::
 
@@ -300,6 +310,8 @@ head(dogs_top5[, c("Dog_Name", "Dog_Breed")])
 Rows and columns can be subset at the same time: 
 
 `df[(rows to extract), (columns to extract)]`.
+
+<br>
 
 In this class we will rarely use this syntax, but it is common in the wild. 
 
@@ -546,7 +558,13 @@ mean(ce$IRAX, na.rm = TRUE)
 
 <br>
 
-Why does the mean income value change between these approaches, even though there are no NA income values?
+::: fragment
+**Q:** Why does the mean income value change between these approaches, even though there are no NA income values?
+:::
+
+::: fragment
+**A:** The moderate approach still drops rows with non-NA `INCOME` values
+:::
 
 ------------------------------------------------------------------------
 
@@ -615,7 +633,7 @@ head(colleges[, c("region", "state", "tier_name", "mr_kq5_pq1")])
 <br>
 
 ::: {.fragment}
-**Write pseudocode to answer**: what states in the west have the highest average mobility rate across their private and elite colleges? 
+**In groups of 3-4, on paper, write pseudocode to answer**: what states in the west have the highest average mobility rate across their private and elite colleges? 
 :::
 
 

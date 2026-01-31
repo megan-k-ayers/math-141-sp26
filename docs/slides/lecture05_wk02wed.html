@@ -318,19 +318,23 @@
 </div><div class="column fragment" style="width:50%;">
 <p>→ Converting quantitative variables to/from categorical variables</p>
 </div></div>
-<table class="caption-top">
-<colgroup>
-<col style="width: 100%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">## <code>dplyr</code> for Data Wrangling</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">- Five common wrangling verbs: - <code>count()</code> - <code>filter()</code> - <code>arrange()</code> - <code>mutate()</code> - <code>summarize()</code> - One action: - <code>group_by()</code></td>
-</tr>
-</tbody>
-</table>
+</section>
+<section id="dplyr-for-data-wrangling" class="slide level2">
+<h2><code>dplyr</code> for Data Wrangling</h2>
+<ul>
+<li class="fragment">Five common wrangling verbs:
+<ul>
+<li class="fragment"><code>count()</code></li>
+<li class="fragment"><code>filter()</code></li>
+<li class="fragment"><code>arrange()</code></li>
+<li class="fragment"><code>mutate()</code></li>
+<li class="fragment"><code>summarize()</code></li>
+</ul></li>
+<li class="fragment">One action:
+<ul>
+<li class="fragment"><code>group_by()</code></li>
+</ul></li>
+</ul>
 </section>
 <section id="motivation-for-filtering" class="slide level2">
 <h2>Motivation for “filtering”</h2>
@@ -1479,10 +1483,13 @@
 </section>
 <section id="filtering-cases" class="slide level2">
 <h2>Filtering cases</h2>
-<div class="fragment">
 <p>We remove rows according to logical conditions about variable cases:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">filter</span>(dogs, Dog_Name <span class="sc">==</span> <span class="st">"Freddy"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>freddy <span class="ot">&lt;-</span> <span class="fu">filter</span>(dogs, Dog_Name <span class="sc">==</span> <span class="st">"Freddy"</span>)</span>
+<span id="cb8-2"><a></a>freddy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Dog_Name Dog_Breed      Neighborhood
 1   Freddy  Shep Mix Neighborhood Nine</code></pre>
@@ -1492,8 +1499,8 @@
 <p><br></p>
 <div class="fragment">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>not_fred <span class="ot">&lt;-</span> <span class="fu">filter</span>(dogs, Dog_Name <span class="sc">!=</span> <span class="st">"Freddy"</span>)</span>
-<span id="cb10-2"><a></a><span class="fu">head</span>(not_fred)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>not_freddy <span class="ot">&lt;-</span> <span class="fu">filter</span>(dogs, Dog_Name <span class="sc">!=</span> <span class="st">"Freddy"</span>)</span>
+<span id="cb10-2"><a></a><span class="fu">head</span>(not_freddy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Dog_Name            Dog_Breed      Neighborhood
 1     Thor                Boxer    East Cambridge
@@ -1505,6 +1512,9 @@
 </div>
 </div>
 </div>
+</div><div class="column fragment" style="width:50%;">
+<p><img data-src="img/freddie.jpeg" style="width:50.0%"></p>
+</div></div>
 </section>
 <section id="filtering-cases-1" class="slide level2">
 <h2>Filtering cases</h2>
@@ -1547,8 +1557,8 @@
 <div class="fragment">
 <p>The pipe operator <code>%&gt;%</code> is a handy way to string multiple commands together in <code>dplyr</code>. Instead of:</p>
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>not_fred <span class="ot">&lt;-</span> <span class="fu">filter</span>(dogs, Dog_Name <span class="sc">!=</span> <span class="st">"Freddy"</span>)</span>
-<span id="cb18-2"><a></a><span class="fu">head</span>(not_fred)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>not_freddy <span class="ot">&lt;-</span> <span class="fu">filter</span>(dogs, Dog_Name <span class="sc">!=</span> <span class="st">"Freddy"</span>)</span>
+<span id="cb18-2"><a></a><span class="fu">head</span>(not_freddy)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Dog_Name            Dog_Breed      Neighborhood
 1     Thor                Boxer    East Cambridge
@@ -1612,6 +1622,7 @@
 <h2>FYI: We can filter cases with syntax like <code>df[condition, ]</code></h2>
 <p>Rows and columns can be subset at the same time:</p>
 <p><code>df[(rows to extract), (columns to extract)]</code>.</p>
+<p><br></p>
 <p>In this class we will rarely use this syntax, but it is common in the wild.</p>
 <p><br></p>
 <div class="cell" data-layout-align="center">
@@ -16434,7 +16445,12 @@
 </div>
 </div>
 <p><br></p>
-<p>Why does the mean income value change between these approaches, even though there are no NA income values?</p>
+<div class="fragment">
+<p><strong>Q:</strong> Why does the mean income value change between these approaches, even though there are no NA income values?</p>
+</div>
+<div class="fragment">
+<p><strong>A:</strong> The moderate approach still drops rows with non-NA <code>INCOME</code> values</p>
+</div>
 </section>
 <section id="summarizing-within-groups-using-group_by-and-summarize" class="slide level2">
 <h2>Summarizing within groups using <code>group_by()</code> and <code>summarize()</code></h2>
@@ -16522,7 +16538,7 @@
 </div></div>
 <p><br></p>
 <div class="fragment">
-<p><strong>Write pseudocode to answer</strong>: what states in the west have the highest average mobility rate across their private and elite colleges?</p>
+<p><strong>In groups of 3-4, on paper, write pseudocode to answer</strong>: what states in the west have the highest average mobility rate across their private and elite colleges?</p>
 </div>
 
 
