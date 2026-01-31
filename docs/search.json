@@ -560,13 +560,6 @@
     "text": "Goals for Today\n\nGetting started in Math 141\n\nCourse structure and technologies\nWhere to find resources\nCourse expectations\n\nIntroduce statistical thinking\nIntroduce data frames"
   },
   {
-    "objectID": "slides/lecture01_wk01mon.html#class-introductions",
-    "href": "slides/lecture01_wk01mon.html#class-introductions",
-    "title": "Math 141",
-    "section": "Class introductions",
-    "text": "Class introductions\n\nName\nPronouns\nShare something you’re excited about for this semester (Reed-related or not)"
-  },
-  {
     "objectID": "slides/lecture01_wk01mon.html#getting-started-in-math-141",
     "href": "slides/lecture01_wk01mon.html#getting-started-in-math-141",
     "title": "Math 141",
@@ -590,20 +583,6 @@
   {
     "objectID": "slides/lecture01_wk01mon.html#getting-started-in-math-141-3",
     "href": "slides/lecture01_wk01mon.html#getting-started-in-math-141-3",
-    "title": "Math 141",
-    "section": "Getting Started in Math 141",
-    "text": "Getting Started in Math 141\nFinding Resources"
-  },
-  {
-    "objectID": "slides/lecture01_wk01mon.html#getting-started-in-math-141-4",
-    "href": "slides/lecture01_wk01mon.html#getting-started-in-math-141-4",
-    "title": "Math 141",
-    "section": "Getting Started in Math 141",
-    "text": "Getting Started in Math 141\nFinding Resources"
-  },
-  {
-    "objectID": "slides/lecture01_wk01mon.html#getting-started-in-math-141-5",
-    "href": "slides/lecture01_wk01mon.html#getting-started-in-math-141-5",
     "title": "Math 141",
     "section": "Getting Started in Math 141",
     "text": "Getting Started in Math 141\nFinding Resources"
@@ -656,6 +635,13 @@
     "title": "Math 141",
     "section": "Engagement",
     "text": "Engagement\n\nBeing actively present is key. This requires attendance, and can look like:\n\nActive listening\nContributing to discussion at the small group and/or classroom level\nContributing to discussions on Slack\n\nMissing more than 4 lectures or 1 lab will have a small, accumulating impact on your grade.\nDuring lecture and lab, remove distractions.\n\nWhen we are on our computers, close email, social media, news, etc.\nHide your phone."
+  },
+  {
+    "objectID": "slides/lecture01_wk01mon.html#engagement-1",
+    "href": "slides/lecture01_wk01mon.html#engagement-1",
+    "title": "Math 141",
+    "section": "Engagement",
+    "text": "Engagement\n\nI have high expectations but know that all of you (regardless of your stats, math, or computing background) have the ability to meet them.\nWe are all going to make mistakes, we will learn more because of them."
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#course-climate",
@@ -747,6 +733,13 @@
     "title": "Math 141",
     "section": "Example: Visualizing COVID Prevalence",
     "text": "Example: Visualizing COVID Prevalence\n\nAfter public outcry, the Georgia Department of Public Health updated the graph:\n\n\n\n\n\n\n\nHow do your conclusions about COVID-19 cases in Georgia change when interpreting the new graph?"
+  },
+  {
+    "objectID": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-6",
+    "href": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-6",
+    "title": "Math 141",
+    "section": "Example: Visualizing COVID Prevalence",
+    "text": "Example: Visualizing COVID Prevalence\nAlberto Cairo, a journalist and designer, created the second graph of the Georgia COVID-19 data:\n\n \n\n\nA key principle of data visualization is to “help the viewer make meaningful comparisons”.\nWhat comparisons are made easy by the lefthand graph? What about by the righthand graph?"
   },
   {
     "objectID": "slides/lecture01_wk01mon.html#statistical-thinking",
@@ -882,6 +875,13 @@
     "text": "Math 141: Readings for February 5, 2026\nBefore coming to lab today, please read the following material:\n\nMD Section 2.9"
   },
   {
+    "objectID": "slides/labslides01.html#announcementsreminders",
+    "href": "slides/labslides01.html#announcementsreminders",
+    "title": "Math 141",
+    "section": "Announcements/reminders",
+    "text": "Announcements/reminders\n\nCourse assistant office hours are posted on Moodle"
+  },
+  {
     "objectID": "slides/labslides01.html#goals-for-today",
     "href": "slides/labslides01.html#goals-for-today",
     "title": "Math 141",
@@ -915,13 +915,6 @@
     "title": "Math 141",
     "section": "Open working time",
     "text": "Open working time\n\n\nThe lab will be due on Gradescope (as a PDF) on Tuesday February 3 at 11:59pm.\nCheck out out your Gradescope account for this class before Tuesday afternoon.\n\nCourse entry code: on the course website and Moodle.\nIf you have any issues, send me an email before Tuesday afternoon.\n\n\n\n\n\nTo-do:\n\nFollow the lab instructions to access lab materials / RStudio Server.\nReview intro.qmd, if you’d like.\nStart the lab exercises in lab01_yournamehere.qmd."
-  },
-  {
-    "objectID": "slides/lecture02_wk01wed.html#math-141-office-hours-schedule",
-    "href": "slides/lecture02_wk01wed.html#math-141-office-hours-schedule",
-    "title": "Math 141",
-    "section": "Math 141 Office Hours Schedule",
-    "text": "Math 141 Office Hours Schedule\n\nOn Moodle"
   },
   {
     "objectID": "slides/lecture02_wk01wed.html#data-frames",
@@ -999,13 +992,6 @@
     "title": "Math 141",
     "section": "Grammar of Graphics",
     "text": "Grammar of Graphics\n\ndata: Data frame that contains the raw data\n\nColumns are variables used in the graph\n\ngeom: Geometric form that the data are mapped to.\n\nEX: Point, line, bar, text, …\n\naesthetic: Visual properties of the geom\n\nEX: X (horizontal) position, y (vertical) position, color, fill, shape\n\nscale: Controls how data are mapped to the visual values of the aesthetic.\n\nEX: particular colors, log scale\n\nguide: Legend/key to help user convert visual display back to the data\n\n\nFor right now, we won’t focus on the names of particular types of graphs (e.g., scatterplot) but on the elements of graphs."
-  },
-  {
-    "objectID": "slides/lecture02_wk01wed.html#many-ways-to-visually-tell-a-story",
-    "href": "slides/lecture02_wk01wed.html#many-ways-to-visually-tell-a-story",
-    "title": "Math 141",
-    "section": "Many Ways To Visually Tell A Story",
-    "text": "Many Ways To Visually Tell A Story\nWashington Post’s Approach:\n\n\n\n\n\nPeriscopic’s Approach"
   },
   {
     "objectID": "slides/lecture02_wk01wed.html#bad-graphics",
@@ -1106,6 +1092,13 @@
     "text": "Measures of Center\n\n\nWhy is the mean larger than the median?\n\ndata.frame(mean_miles = mean(biketown$Distance_Miles),\n           median_miles = median(biketown$Distance_Miles))\n\n  mean_miles median_miles\n1   2.044768         1.48\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswer: the distribution is skewed. In skewed distributions, the mean is pulled farther in the direction of skew than the median."
   },
   {
+    "objectID": "slides/lecture04_wk02mon.html#measures-of-center-6",
+    "href": "slides/lecture04_wk02mon.html#measures-of-center-6",
+    "title": "Math 141",
+    "section": "Measures of Center",
+    "text": "Measures of Center\nNote: The mean is very sensitive to outliers, while the median is not.\n\nmy_data &lt;- c(1, 2, 5, 7, 8, 10)\nmy_data_with_outlier &lt;- c(1, 2, 5, 7, 8, 100)\n\n\n\n\n\n\nmean(my_data)\n\n[1] 5.5\n\n\n\n\nmean(my_data_with_outlier)\n\n[1] 20.5\n\n\n\n\n\n\n\n\n\nmedian(my_data)\n\n[1] 6\n\n\n\n\nmedian(my_data_with_outlier)\n\n[1] 6\n\n\n\n\n\n\nWe call the median a robust statistic."
+  },
+  {
     "objectID": "slides/lecture04_wk02mon.html#computing-measures-of-center-by-groups",
     "href": "slides/lecture04_wk02mon.html#computing-measures-of-center-by-groups",
     "title": "Math 141",
@@ -1183,6 +1176,13 @@
     "text": "Measures of Variability\n\nWant a statistic that captures how much observations deviate from the mean\n\n\n\n\n\nFind how much each observation deviates from the mean.\nCompute the (nearly) average of the squared deviations (\\(s^2\\)).\nBecause observations are squared, units differ from original data.\n\n\n\n\nThe square root of the sample variance is called the sample standard deviation \\(s\\).\n\n\n\n\n\nCompute in R:\n\nvar(biketown$Distance_Miles)  # Variance\n\n[1] 3.805638\n\n\n\n\nsd(biketown$Distance_Miles)   # Standard deviation \n\n[1] 1.950804\n\n\n\n\n\n\nsqrt(var(biketown$Distance_Miles))\n\n[1] 1.950804"
   },
   {
+    "objectID": "slides/lecture04_wk02mon.html#visualizing-standard-deviation",
+    "href": "slides/lecture04_wk02mon.html#visualizing-standard-deviation",
+    "title": "Math 141",
+    "section": "Visualizing Standard Deviation",
+    "text": "Visualizing Standard Deviation\n\nThe standard deviation measures the typical size of deviations from the mean.\nFor most data sets, the large majority of observations are within 2 standard deviations of the mean.\n\n\n\nsd(biketown$Distance_Miles)\n\n[1] 1.950804"
+  },
+  {
     "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-9",
     "href": "slides/lecture04_wk02mon.html#measures-of-variability-9",
     "title": "Math 141",
@@ -1190,32 +1190,11 @@
     "text": "Measures of Variability\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\n25% of all observations are less than the first quartile Q1\n25% of all observations are greater than the third quartile Q3\n\n\nCompute with R:\n\nIQR(biketown$Distance_Miles)\n\n[1] 1.89"
   },
   {
-    "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-10",
-    "href": "slides/lecture04_wk02mon.html#measures-of-variability-10",
+    "objectID": "slides/lecture04_wk02mon.html#visualizing-the-iqr",
+    "href": "slides/lecture04_wk02mon.html#visualizing-the-iqr",
     "title": "Math 141",
-    "section": "Measures of Variability",
-    "text": "Measures of Variability\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\n\n25% of all observations are less than the first quartile Q1\n25% of all observations are greater than the third quartile Q3\n\n\n\nCompute with R:\n\nIQR(biketown$Distance_Miles)\n\n[1] 1.89"
-  },
-  {
-    "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-11",
-    "href": "slides/lecture04_wk02mon.html#measures-of-variability-11",
-    "title": "Math 141",
-    "section": "Measures of Variability",
-    "text": "Measures of Variability\n\n\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\nCompute with R:\n\nIQR(biketown$Distance_Miles)\n\n[1] 1.89"
-  },
-  {
-    "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-12",
-    "href": "slides/lecture04_wk02mon.html#measures-of-variability-12",
-    "title": "Math 141",
-    "section": "Measures of Variability",
-    "text": "Measures of Variability\n\n\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]"
-  },
-  {
-    "objectID": "slides/lecture04_wk02mon.html#measures-of-variability-13",
-    "href": "slides/lecture04_wk02mon.html#measures-of-variability-13",
-    "title": "Math 141",
-    "section": "Measures of Variability",
-    "text": "Measures of Variability\n\n\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\nCompute with R:\n\nIQR(biketown$Distance_Miles)\n\n[1] 1.89"
+    "section": "Visualizing the IQR",
+    "text": "Visualizing the IQR\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\n\nquantile(biketown$Distance_Miles, c(0.25, 0.5, 0.75))\n\n 25%  50%  75% \n0.79 1.48 2.68"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#comparing-measures-of-variability",
@@ -1244,13 +1223,6 @@
     "title": "Math 141",
     "section": "Frequency Table",
     "text": "Frequency Table\nDistributions of categorical variables can be presented in tables and summarized in bar charts.\n\n\n\ncount(dogs_top5, Dog_Name)  # Handy function\n\n  Dog_Name  n\n1  Charlie 14\n2   Cooper  8\n3     Lucy 10\n4     Luna 14\n5    Rosie 10\n\n\n\n\nggplot(data = dogs_top5, \n    mapping = aes(x = Dog_Name)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\n\nQ: Why can’t we use mean or SD here?"
-  },
-  {
-    "objectID": "slides/lecture04_wk02mon.html#frequency-table-1",
-    "href": "slides/lecture04_wk02mon.html#frequency-table-1",
-    "title": "Math 141",
-    "section": "Frequency Table",
-    "text": "Frequency Table\n\n\n\ncount(dogs_top5, Dog_Name)\n\n  Dog_Name  n\n1  Charlie 14\n2   Cooper  8\n3     Lucy 10\n4     Luna 14\n5    Rosie 10\n\n\n\n\ncount(dogs_top5, Dog_Name, sort = TRUE)\n\n  Dog_Name  n\n1  Charlie 14\n2     Luna 14\n3     Lucy 10\n4    Rosie 10\n5   Cooper  8"
   },
   {
     "objectID": "slides/lecture04_wk02mon.html#contingency-table",
@@ -1419,47 +1391,5 @@
     "title": "Math 141",
     "section": "Recap",
     "text": "Recap\nToday we defined:\n\nRandom processes, events, probability, probability models\nLaw of Large Numbers\nAddition Rule and Complement Rule\n\n\nNext time\n\nMore probability rules and an activity!"
-  },
-  {
-    "objectID": "slides/lecture01_wk01mon.html#engagement-1",
-    "href": "slides/lecture01_wk01mon.html#engagement-1",
-    "title": "Math 141",
-    "section": "Engagement",
-    "text": "Engagement\n\nI have high expectations but know that all of you (regardless of your stats, math, or computing background) have the ability to meet them.\nWe are all going to make mistakes, we will learn more because of them."
-  },
-  {
-    "objectID": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-6",
-    "href": "slides/lecture01_wk01mon.html#example-visualizing-covid-prevalence-6",
-    "title": "Math 141",
-    "section": "Example: Visualizing COVID Prevalence",
-    "text": "Example: Visualizing COVID Prevalence\nAlberto Cairo, a journalist and designer, created the second graph of the Georgia COVID-19 data:\n\n \n\n\nA key principle of data visualization is to “help the viewer make meaningful comparisons”.\nWhat comparisons are made easy by the lefthand graph? What about by the righthand graph?"
-  },
-  {
-    "objectID": "slides/labslides01.html#announcementsreminders",
-    "href": "slides/labslides01.html#announcementsreminders",
-    "title": "Math 141",
-    "section": "Announcements/reminders",
-    "text": "Announcements/reminders\n\nCourse assistant office hours are posted on Moodle"
-  },
-  {
-    "objectID": "slides/lecture04_wk02mon.html#measures-of-center-6",
-    "href": "slides/lecture04_wk02mon.html#measures-of-center-6",
-    "title": "Math 141",
-    "section": "Measures of Center",
-    "text": "Measures of Center\nNote: The mean is very sensitive to outliers, while the median is not.\n\nmy_data &lt;- c(1, 2, 5, 7, 8, 10)\nmy_data_with_outlier &lt;- c(1, 2, 5, 7, 8, 100)\n\n\n\n\n\n\nmean(my_data)\n\n[1] 5.5\n\n\n\n\nmean(my_data_with_outlier)\n\n[1] 20.5\n\n\n\n\n\n\n\n\n\nmedian(my_data)\n\n[1] 6\n\n\n\n\nmedian(my_data_with_outlier)\n\n[1] 6\n\n\n\n\n\n\nWe call the median a robust statistic."
-  },
-  {
-    "objectID": "slides/lecture04_wk02mon.html#visualizing-standard-deviation",
-    "href": "slides/lecture04_wk02mon.html#visualizing-standard-deviation",
-    "title": "Math 141",
-    "section": "Visualizing Standard Deviation",
-    "text": "Visualizing Standard Deviation\n\nThe standard deviation measures the typical size of deviations from the mean.\nFor most data sets, the large majority of observations are within 2 standard deviations of the mean.\n\n\n\nsd(biketown$Distance_Miles)\n\n[1] 1.950804"
-  },
-  {
-    "objectID": "slides/lecture04_wk02mon.html#visualizing-the-iqr",
-    "href": "slides/lecture04_wk02mon.html#visualizing-the-iqr",
-    "title": "Math 141",
-    "section": "Visualizing the IQR",
-    "text": "Visualizing the IQR\n\nIn addition to the sample standard deviation and the sample variance, there is the sample interquartile range (IQR):\n\n\\[\n\\mbox{IQR} = \\mbox{Q}_3 - \\mbox{Q}_1\n\\]\n\n\nquantile(biketown$Distance_Miles, c(0.25, 0.5, 0.75))\n\n 25%  50%  75% \n0.79 1.48 2.68"
   }
 ]
