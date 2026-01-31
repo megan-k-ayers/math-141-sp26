@@ -33,7 +33,7 @@ scheduled-docs:
             - type: Reading
               href: readings/reading03_wk01thu.qmd
             - type: Lab Instructions
-              href: labs/lab_instr_01.qmd
+              href: readings/lab_instr_01.qmd
             - type: Download Lab
               href: labs/lab01.zip
             - type: Slides
