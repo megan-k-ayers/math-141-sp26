@@ -4,7 +4,8 @@ project:
   render:
     - "*.qmd"
     - "!exams/*"
-    - "!labs/data/vitd_subset.csv"
+    - "!labs/*"
+    - "!hw/*"
 
 website:
   title: "Math 141"
