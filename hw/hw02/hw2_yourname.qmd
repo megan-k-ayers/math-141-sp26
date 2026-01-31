@@ -12,6 +12,7 @@ execute:
 ## Due: Friday, February 13th at 11:59pm on Gradescope as a **PDF**
 
 In this homework assignment you will practice:
+
 - Interpreting and analyzing data using summary statistics
 - Reading code for data manipulation in `R`
 - Computing and interpreting probabilities from contingency tables 
@@ -160,7 +161,7 @@ c. $\frac{\bar{x}}{median} > 1$
 
 For this exercise, we will use data from a 2021 paper published by IEEE, [von Kugelgen J et al. 2021](10.1109/TAI.2021.3073088). This paper analyses case fatality rates of COVID-19 in Italy and China during 2020. 
 
-a. Run the chunk below to view data on COVID-19 cases and fatalities by age group in Italy (on March 9th) and China (on February 22). Using R, calculate the case fatality rate (the proportion of cases that resulted in fatality) for each age group in each country. What do you notice when comparing rates between the two countries? Did particular age groups have higher rates in one country compared to the other?
+a. Run the chunk below to view data on COVID-19 cases and fatalities by age group in Italy (on March 9th) and China (on February 22). Using R, calculate the case fatality rate (the proportion of cases that resulted in fatality) for each age group in each country. What do you notice when comparing rates between the two countries?
 
 ```{r}
 covid <- read.csv("data/italy_china_covid_comp.csv")
@@ -177,7 +178,7 @@ b. Either using R, or by hand, calculate the overall case fatality rate within e
 
 
 
-c. These results are an example of Simpson's Paradox, where trends observed in aggregate comparisons reverse when we control for other variables. Run the chunk below to look at a barplot showing the number of COVID-19 cases per age group. How does this help explain what you observed in parts (a) and (b)?
+c. These results are an example of **Simpson's Paradox**, a phenomenon where trends observed in aggregate comparisons reverse when we control for other variables. Run the chunk below to look at a barplot showing the number of COVID-19 cases per age group. How does this help explain what you observed in parts (a) and (b)?
 
 ```{r}
 covid <- read.csv("data/italy_china_covid_comp.csv")
